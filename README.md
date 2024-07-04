@@ -1,10 +1,10 @@
 # Flutter Ekip 1
 
 ## Takım İsmi veya uygulama ismi(LOGO)
-### Takım Flutter 1
+Takım Flutter 1
 
-Ürün İle İlgili Bilgiler
-## **Takım Elemanları**
+## Ürün İle İlgili Bilgiler
+**Takım Elemanları**
 - **Scrum Master**:
 - **Product Owner**:
 - **Developer**:
