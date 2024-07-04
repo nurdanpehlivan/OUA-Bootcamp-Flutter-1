@@ -1,7 +1,7 @@
-# Flutter-Ekip-1-
+# Flutter Ekip 1
 
-Takım İsmi
-Takım Flutter 1
+## Takım İsmi
+### Takım Flutter 1
 
 Ürün İle İlgili Bilgiler
 Takım Elemanları
