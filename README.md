@@ -11,38 +11,38 @@ Takım Flutter 1
 - **Developer**:
 - **Developer**:
 
-# Ürün İsmi
+## Ürün İsmi
 - **QuizDev**
 
-# Ürün Açıklaması
+## Ürün Açıklaması
 
 
-# Ürün Özellikleri
+## Ürün Özellikleri
 
-# Hedef Kitle
+## Hedef Kitle
 
-# Product Backlog URL
+## Product Backlog URL
 
-## Sprint 1
-**Sprint Notları:**
+# Sprint 1
+- **Sprint Notları:**
 
-**Sprint içinde tamamlanması tahmin edilen puan:**
+- **Sprint içinde tamamlanması tahmin edilen puan:**
 
-**Puan tamamlama mantığı:**
+- **Puan tamamlama mantığı:**
 
-**Backlog düzeni ve Story seçimleri:**
+- **Backlog düzeni ve Story seçimleri:**
 
-**Daily Scrum:**
+- **Daily Scrum:**
 
-**Sprint board update: Sprint board screenshotları: Backlog 1 Backlog 2 Backlog 3**
+- **Sprint board update: Sprint board screenshotları: Backlog 1 Backlog 2 Backlog 3**
 
-**Ürün Durumu: Ekran görüntüleri: Screenshot 1 Screenshot 2**
+- **Ürün Durumu: Ekran görüntüleri: Screenshot 1 Screenshot 2**
 
-**Sprint Review: Alınan kararlar:** **Sprint Review katılımcıları: ......**
+- **Sprint Review: Alınan kararlar:** **Sprint Review katılımcıları: ......**
 
-**Sprint Retrospective:**
+- **Sprint Retrospective:**
 
-**-Diğer Notlar:**
+- **-Diğer Notlar:**
 
 N/A
 ## Sprint 2
