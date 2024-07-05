@@ -14,8 +14,6 @@ Takım Flutter 1
 ## Ürün İsmi
 - **QuizDev**
 
-## Product Backlog URL
-
 ## Ürün Açıklaması
 
 ## Ürün Özellikleri
