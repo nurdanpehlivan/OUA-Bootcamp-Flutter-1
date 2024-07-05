@@ -1,6 +1,6 @@
 # Flutter Ekip 1
 
-## Takım İsmi veya uygulama ismi(LOGO)
+# Takım İsmi veya uygulama ismi(LOGO)
 Takım Flutter 1
 
 ## Ürün İle İlgili Bilgiler
@@ -11,19 +11,19 @@ Takım Flutter 1
 - **Developer**:
 - **Developer**:
 
-### Ürün İsmi
+## Ürün İsmi
+- **QuizDev**
+
+## Ürün Açıklaması
 
 
-### Ürün Açıklaması
+## Ürün Özellikleri
 
+## Hedef Kitle
 
-### Ürün Özellikleri
+## Product Backlog URL
 
-### Hedef Kitle
-
-### Product Backlog URL
-
-### Sprint 1
+## Sprint 1
 **Sprint Notları:**
 
 **Sprint içinde tamamlanması tahmin edilen puan:**
@@ -45,5 +45,5 @@ Takım Flutter 1
 **-Diğer Notlar:**
 
 N/A
-### Sprint 2
-### Sprint 3
+## Sprint 2
+## Sprint 3
