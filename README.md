@@ -1,4 +1,5 @@
-# Flutter Ekip 1
+# Takım İsmi
+Takım Flutter 1
 
 # Takım İsmi veya uygulama ismi(LOGO)
 Takım Flutter 1
