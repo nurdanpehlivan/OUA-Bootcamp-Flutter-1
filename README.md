@@ -3,7 +3,7 @@
 # Takım İsmi veya uygulama ismi(LOGO)
 Takım Flutter 1
 
-## Ürün İle İlgili Bilgiler
+# Ürün İle İlgili Bilgiler
 **Takım Elemanları**
 - **Scrum Master**:
 - **Product Owner**:
@@ -11,17 +11,17 @@ Takım Flutter 1
 - **Developer**:
 - **Developer**:
 
-## Ürün İsmi
+# Ürün İsmi
 - **QuizDev**
 
-## Ürün Açıklaması
+# Ürün Açıklaması
 
 
-## Ürün Özellikleri
+# Ürün Özellikleri
 
-## Hedef Kitle
+# Hedef Kitle
 
-## Product Backlog URL
+# Product Backlog URL
 
 ## Sprint 1
 **Sprint Notları:**
