@@ -117,13 +117,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   <details>
     <summary><h2>Hedef Kitle</h2></summary>
-    <p>Öğrenme uygulamamız, yeni başlayanlardan deneyimli programcılara kadar geniş bir kitleye yönelik olarak tasarlanmıştır. Öncelikle yeni beceriler kazanmaya istekli ve sürekli öğrenmeye değer veren Y kuşağını ve Z kuşağını hedef alıyor. Bu genç nesiller, kariyer olanaklarını ve kişisel projelerini geliştirmek için çeşitli programlama dillerinde uzmanlaşmaya ilgi duyuyor. 
-    
-    Uygulama aynı zamanda geleneksel öğrenme kaynaklarına sınırlı erişime sahip olan ve esnek, hareket halindeki öğrenme çözümlerini tercih eden öğrenciler ve profesyoneller de dahil olmak üzere şehir sakinleri için de idealdir. Ayrıca platformumuz, en son teknolojik gelişmelerden haberdar olma konusunda tutkulu olan ve programlama kavramlarına ilişkin anlayışlarını derinleştirmek isteyen yaşam boyu öğrenenlere hitap etmektedir.
-
-    Hareket halindeyken taşınabilir ve erişilebilir bir öğrenme aracına ihtiyaç duyan gezginler ve dijital göçebeler, uygulamamızı özellikle yararlı bulacaktır. Ayrıca, bilgilerini yapılandırılmış ve kapsamlı bir şekilde genişletmek isteyen teknoloji meraklıları ve hobi sahipleri de ana hedef kitlemiz arasında yer alıyor.
-
-    Son olarak, çevresel etkilerinin bilincinde olan sürdürülebilir öğrenciler, atık azaltma ve çevre dostu uygulamaları teşvik etme değerleriyle uyumlu dijital, kağıtsız eğitim yaklaşımımızı takdir edebilir.</p></p>
+    <p>Öğrenme uygulamamız, yeni başlayanlardan deneyimli programcılara kadar geniş bir kitleye yönelik olarak tasarlanmıştır. Öncelikle yeni beceriler kazanmaya istekli ve sürekli öğrenmeye değer veren Y kuşağını ve Z kuşağını hedef alıyor. Bu genç nesiller, kariyer olanaklarını ve kişisel projelerini geliştirmek için çeşitli programlama dillerinde uzmanlaşmaya ilgi duyuyor. Uygulama aynı zamanda geleneksel öğrenme kaynaklarına sınırlı erişime sahip olan ve esnek, hareket halindeki öğrenme çözümlerini tercih eden öğrenciler ve profesyoneller de dahil olmak üzere şehir sakinleri için de idealdir. Ayrıca platformumuz, en son teknolojik gelişmelerden haberdar olma konusunda tutkulu olan ve programlama kavramlarına ilişkin anlayışlarını derinleştirmek isteyen yaşam boyu öğrenenlere hitap etmektedir. Hareket halindeyken taşınabilir ve erişilebilir bir öğrenme aracına ihtiyaç duyan gezginler ve dijital göçebeler, uygulamamızı özellikle yararlı bulacaktır. Ayrıca, bilgilerini yapılandırılmış ve kapsamlı bir şekilde genişletmek isteyen teknoloji meraklıları ve hobi sahipleri de ana hedef kitlemiz arasında yer alıyor. Son olarak, çevresel etkilerinin bilincinde olan sürdürülebilir öğrenciler, atık azaltma ve çevre dostu uygulamaları teşvik etme değerleriyle uyumlu dijital, kağıtsız eğitim yaklaşımımızı takdir edebilir.</p>
   </details>
 
   --- 
@@ -183,12 +177,6 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     <img src="bootcamp/sprintOne/boardupdate/14.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/boardupdate/15.png" style="max-width: 100%; height: auto;">
   </details>"
-
-  <details>
-    <summary><h3>Sprint 1 - Burndown Chart</h3><>
-    <img src="bootcampFiles/sprintOne/burndown/10.png" style="max-width: 100%; height: auto;">
-    <img src="bootcampFiles/sprintOne/burndown/11.png" style="max-width: 100%; height: auto;">
-  </details>
 
 
   - **Sprint Notları**:
