@@ -55,7 +55,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="bootcamp/general/squarepics/Abdüssamed.png" width="50" height="50" /></td>
+      <td><img src="bootcamp/general/squarepics/Abdüssamed.jpg" width="50" height="50" /></td>
       <td>Abdüssamed Güldal</td>
       <td>Developer</td>
       <td>
