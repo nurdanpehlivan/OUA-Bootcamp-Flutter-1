@@ -5,7 +5,12 @@
   # **Ekip & Ürün Adı**
 
   ### **`CodeWise`**
-  <td><img src="bootcamp/general/squarepics/Logo.png" width="50" height="50" /></td>
+  <table>
+    <tr>
+      <td><img src="bootcamp/general/squarepics/Logo.png" width="50" height="50" /></td>
+    </tr>
+  </table>
+  
 
   # Ekip ve Ürün Hakkında Bilgiler
 
