@@ -95,6 +95,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   <h2>Güncel İçerik</h2>
     <p>İçeriğimizi programlama dilleri ve teknolojisindeki en son gelişmeleri yansıtacak şekilde sürekli güncelliyoruz. Bu, kullanıcıların sektörde ihtiyaç duyulan en güncel bilgi ve becerileri öğrenmesini sağlar.</p>
 
+   <h2>Ödül Sistemi:</h2>
+    <p>Başarılı quiz çözümleri ve ders ilerlemeleri sonucunda kullanıcılar puanlar kazanır. Bu puanlar, eğitim kursları, indirim kodları gibi ödüller için kullanılabilir, böylece öğrenme süreci daha teşvik edici ve motive edici hale getirilir.</p>
+
   <h2>Erişilebilir Öğrenim Deneyimi:</h2>
     <p>Amacımız programlama dillerini öğrenmeyi herkes için erişilebilir hale getirmektir. Kullanıcı dostu bir arayüze ve net talimatlara sahip uygulamamız, kullanıcının deneyim düzeyi ne olursa olsun sezgisel ve gezinmesi kolay olacak şekilde tasarlanmıştır</p>
 
