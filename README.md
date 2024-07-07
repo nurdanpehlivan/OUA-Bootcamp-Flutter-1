@@ -4,7 +4,7 @@
 
   # **Ekip & Ürün Adı**
 
-  ### **`QuizCode`**
+  ### **`CodeWise`**
 
   # Ekip ve Ürün Hakkında Bilgiler
 
@@ -194,7 +194,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     - Giriş sistemini takiben `identity verification` yapılmasına karar verildi.
 
   - **Sprint Değerlendirmesi:**
-    - Uygulamanın adı üzerinde çalıştık ve ...... uygulama isminde karar kıldık
+    - Uygulamanın adı üzerinde çalıştık ve 'CodeWise' uygulama isminde karar kıldık
 
     - Bu sprintte zorlandığımız konulardan biri tasarımdı. Tasarım üzerinde fazla durduk ve biraz zaman kaybettik. Bu yüzden logo üzerine de bir çalışma yapmamıştık. Bu konuda da biraz gecikme yaşandı.
 
