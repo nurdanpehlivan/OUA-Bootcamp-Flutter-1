@@ -74,7 +74,7 @@
 
 Her ders, belirli konulara ayrılmış olup, kullanıcıların bu konuları sırasıyla tamamlaması beklenir. Her konu sonrasında başarıyla tamamlanan quizler sayesinde kullanıcılar puan toplar ve bu puanlarla ödüller kazanabilirler. Ödüller arasında eğitim kursları, indirim kodları gibi seçenekler bulunur, bu da öğrenme sürecini hem teşvik edici hem de ödüllendirici bir deneyim haline getirir. 
 
-Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verimli hale getirirken, aynı zamanda teknolojik bilgiye erişimi demokratikleştirmektir. Güçlü bir eğitim altyapısı ve güvenilir bir öğrenme deneyimi sunmak en temel hedeflerimiz arasındadır. Ayrıca, sürekli güncellenen içeriklerimizle, kullanıcılarımızın en güncel bilgilere ulaşmasını sağlamayı hedefliyoruz. Bu sayede, bireylerin kariyerlerinde ve projelerinde başarılı olmalarına katkıda bulunuyoruz.
+Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verimli hale getirirken, aynı zamanda teknolojik bilgiye erişimi demokratikleştirmektir. Güçlü bir eğitim altyapısı ve güvenilir bir öğrenme deneyimi sunmanın yanı sıra, kullanıcılarımızın her başarılı quiz çözümünden sonra puan toplayarak ek eğitim kursları veya indirim kodları kazanmalarını sağlamayı hedefliyoruz. Ayrıca, sürekli güncellenen içeriklerimizle, kullanıcılarımızın en güncel bilgilere ulaşmasını sağlamayı hedefliyoruz. Bu sayede, bireylerin kariyerlerinde ve projelerinde başarılı olmalarına katkıda bulunuyoruz.
 
 
   <details>
