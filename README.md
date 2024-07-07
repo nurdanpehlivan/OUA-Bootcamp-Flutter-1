@@ -5,6 +5,7 @@
   # **Ekip & Ürün Adı**
 
   ### **`CodeWise`**
+  <td><img src="bootcamp/general/squarepics/Logo.png" width="50" height="50" /></td>
 
   # Ekip ve Ürün Hakkında Bilgiler
 
