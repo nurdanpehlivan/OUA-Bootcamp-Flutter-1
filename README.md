@@ -37,7 +37,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="bootcamp/general/squarepics/Abdullah.png" width="50" height="50" /></td>
+      <td><img src="bootcamp/general/squarepics/300x300.png" width="50" height="50" /></td>
       <td>Abdullah Bahromov</td>
       <td>Developer</td>
       <td>
