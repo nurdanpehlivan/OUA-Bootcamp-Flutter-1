@@ -46,7 +46,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="bootcamp/general/squarepics/Aleyna.png" width="50" height="50" /></td>
+      <td><img src="bootcamp/general/squarepics/imresizer-1720349872864.jpg" width="50" height="50" /></td>
       <td>Aleyna Parkaz</td>
       <td>Developer</td>
       <td>
