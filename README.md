@@ -7,7 +7,7 @@
   ### **`CodeWise`**
   <table>
     <tr>
-      <td><img src="bootcamp/general/squarepics/Logo.png" width="50" height="50" /></td>
+      <td><img src="bootcamp/general/squarepics/CodeWise.png" width="50" height="50" /></td>
     </tr>
   </table>
   
