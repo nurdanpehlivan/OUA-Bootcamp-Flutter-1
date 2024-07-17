@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "311005578458",
+    "firebase_url": "https://codewise-5d9bf-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "codewise-5d9bf",
+    "storage_bucket": "codewise-5d9bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311005578458:android:d935a59f1e2d83fed391e3",
+        "android_client_info": {
+          "package_name": "com.example.flutter1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmpdj_8yuuC-M3syb5OLRULuJTU5OxqKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
