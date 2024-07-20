@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      initialRoute: '/login', // Giriş ekranını başlangıç rotası yapabilirsiniz
       routes: {
         '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
