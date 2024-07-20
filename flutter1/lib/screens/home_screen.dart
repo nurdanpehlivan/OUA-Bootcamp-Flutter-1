@@ -1,12 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'categories_page.dart'; // Kategoriler sayfasını içe aktarın
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final User? user = FirebaseAuth.instance.currentUser;
+
+    List<Widget> _widgetOptions = <Widget>[
+      HomeScreenContent(),
+      const CategoriesPage(), // Kategoriler sayfasını buraya ekleyin
+      const Center(child: Text('Ayarlar Ekranı', style: TextStyle(color: Colors.white))), // Diğer sayfalar için örnek içerik
+    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -14,7 +34,6 @@ class HomeScreen extends StatelessWidget {
           'Ana Sayfa',
           style: TextStyle(color: Colors.white),
         ),
-        
         centerTitle: true,
         backgroundColor: Colors.black,
         actions: [
@@ -27,90 +46,120 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.black,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Hoşgeldin, ${user?.displayName ?? 'Kullanıcı'}!',
-                style: const TextStyle(fontSize: 24, color: Colors.white),
-                textAlign: TextAlign.center,
-              ),
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Ana Sayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Kategoriler',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Ayarlar',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.purple,
+        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class HomeScreenContent extends StatelessWidget {
+  const HomeScreenContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final User? user = FirebaseAuth.instance.currentUser;
+
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Hoşgeldin, ${user?.displayName ?? 'Kullanıcı'}!',
+              style: const TextStyle(fontSize: 24, color: Colors.white),
+              textAlign: TextAlign.center,
             ),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Makaleler',
-                style: TextStyle(fontSize: 20, color: Colors.white),
-              ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Makaleler',
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
-            SizedBox(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ArticleCard(
-                    title: 'Flutter ile Mobil Uygulama Geliştirmenin Avantajları',
-                    imageUrl: 'https://example.com/flutter_image.jpg',
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ArticleScreen(
-                            title: 'Flutter ile Mobil Uygulama Geliştirmenin Avantajları',
-                            content: 'Burada makalenin tam metni olacak...',
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                  ArticleCard(
-                    title: 'Backend Development for Beginners',
-                    imageUrl: 'https://example.com/backend_image.jpg',
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ArticleScreen(
-                            title: 'Backend Development for Beginners',
-                            content: 'Burada makalenin tam metni olacak...',
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                  // Diğer makaleler buraya eklenebilir
-                ],
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Yazılım Dilleri',
-                style: TextStyle(fontSize: 20, color: Colors.white),
-              ),
-            ),
-            const Column(
+          ),
+          SizedBox(
+            height: 200,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
               children: [
-                LanguageCard(
-                  language: 'Flutter',
-                  imageUrl: 'https://example.com/flutter_logo.png',
+                ArticleCard(
+                  title: 'Flutter ile Mobil Uygulama Geliştirmenin Avantajları',
+                  imageUrl: 'https://example.com/flutter_image.jpg',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ArticleScreen(
+                          title: 'Flutter ile Mobil Uygulama Geliştirmenin Avantajları',
+                          content: 'Burada makalenin tam metni olacak...',
+                        ),
+                      ),
+                    );
+                  },
                 ),
-                LanguageCard(
-                  language: 'Python',
-                  imageUrl: 'https://example.com/python_logo.png',
+                ArticleCard(
+                  title: 'Backend Development for Beginners',
+                  imageUrl: 'https://example.com/backend_image.jpg',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ArticleScreen(
+                          title: 'Backend Development for Beginners',
+                          content: 'Burada makalenin tam metni olacak...',
+                        ),
+                      ),
+                    );
+                  },
                 ),
-                LanguageCard(
-                  language: 'Java',
-                  imageUrl: 'https://example.com/java_logo.png',
-                ),
-                // Diğer yazılım dilleri buraya eklenebilir
+                // Diğer makaleler buraya eklenebilir
               ],
             ),
-          ],
-        ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Yazılım Dilleri',
+              style: TextStyle(fontSize: 20, color: Colors.white),
+            ),
+          ),
+          const Column(
+            children: [
+              LanguageCard(
+                language: 'Flutter',
+                imageUrl: 'https://example.com/flutter_logo.png',
+              ),
+              LanguageCard(
+                language: 'Python',
+                imageUrl: 'https://example.com/python_logo.png',
+              ),
+              LanguageCard(
+                language: 'Java',
+                imageUrl: 'https://example.com/java_logo.png',
+              ),
+              // Diğer yazılım dilleri buraya eklenebilir
+            ],
+          ),
+        ],
       ),
     );
   }
