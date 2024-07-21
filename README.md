@@ -211,6 +211,83 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 ---
 
 
+  --- 
 
+
+
+  <details>
+    <summary><h1>Sprint 2</h1></summary>
+
+
+  <details>
+    <summary><h3>Sprint 1 - Uygulama Ekran Tasarımları</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Kayıt ve Giriş Ekranları</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/10.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/11.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/12.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/13.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Ana Ekranlar</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/20.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/21.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/22.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Profil Ekranı</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/30.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/31.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Test Ekranları</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/40.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/41.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/42.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcamp/sprintOne/screenshots/43.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+  </table>
+  </details>   
+
+
+  <details>
+    <summary><h3>Sprint 1 - Sprint Trello Güncellemeleri</h3></summary>
+    <img src="bootcamp/sprintOne/boardupdate/10.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/boardupdate/11.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/boardupdate/12.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/boardupdate/13.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/boardupdate/14.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/boardupdate/15.png" style="max-width: 100%; height: auto;">
+  </details>"
+
+
+  - **Sprint Notları**:
+    - Proje yönetimi için  Trello kullanılması kararlaştırıldı.
+
+    - UI tasarımları için Figma kullanılması kararlaştırıldı.
+
+    - Durum yönetimi için Discord kullanılması kararlaştırıldı.
+
+    - Giriş sistemi olarak  email login kullanılması kararlaştırıldı.
+
+    - Giriş sistemini takiben identity verification yapılmasına karar verildi.
+
+  - **Sprint Değerlendirmesi:**
+    - Uygulamanın adı üzerinde çalıştık ve 'CodeWise' uygulama isminde karar kıldık
+
+    - Bu sprintte zorlandığımız konulardan biri tasarımdı. Tasarım üzerinde fazla durduk ve biraz zaman kaybettik. Bu yüzden logo üzerine de bir çalışma yapmamıştık. Bu konuda da biraz gecikme yaşandı.
+
+    - Genel olarak güzel bir sprint geçirdik.
+
+  - **Sprint Review Participants:** Adem Han, Nurdan Pehlivan, Abdullah Bahromov, Aleyna Parkaz, Abdüssamed Güldal
   </body>
   </html>
