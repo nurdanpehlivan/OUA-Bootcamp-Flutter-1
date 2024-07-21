@@ -165,23 +165,23 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     </tr>
     <tr>
       <td>1</td>
-      <td>Kullanıcı Kayıt ve Giriş</td>
-      <td>Kullanıcıların kayıt olabilmesi ve giriş yapabilmesi için gerekli ekranlar ve işlevsellikler geliştirildi.</td>
+      <td>Proje Planı ve Kick-off</td>
+      <td>Projenin tanıtımı ve ekip üyeleri ile birlikte proje planının oluşturulması. Kick-off toplantısı ile projenin başlangıç aşamaları belirlendi.</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Ders Modülleri</td>
-      <td>Ders modülleri ve ilgili ekranlar oluşturuldu. Kullanıcıların dersleri seçebilmesi ve ilerleyebilmesi sağlandı.</td>
+      <td>İhtiyaç Analizi</td>
+      <td>Projenin gereksinimlerini ve kullanıcı ihtiyaçlarını belirlemek için analiz çalışmaları yapıldı.</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Quiz ve Testler</td>
-      <td>Ders sonlarında kullanıcıların bilgilerini test edebileceği quiz ve test modülleri geliştirildi.</td>
+      <td>Wireframe ve Mockup</td>
+      <td>Uygulamanın tasarımı için wireframe ve mockup çalışmaları yapıldı.</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Ödül Sistemi</td>
-      <td>Kullanıcıların quiz ve ders ilerlemeleri sonucunda puan kazanabileceği ödül sistemi entegre edildi.</td>
+      <td>Veritabanı Tasarımı</td>
+      <td>Uygulamanın veritabanı tasarımı yapıldı ve gerekli tablolar oluşturuldu.</td>
     </tr>
   </table>
 </details>
