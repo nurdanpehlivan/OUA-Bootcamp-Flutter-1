@@ -247,6 +247,12 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
   - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+ 
+<details>
+    <summary><h3>Sprintde Geliştirilen Ekranlar:</h3></summary>
+    <img src="bootcamp/sprintOne/screenshots/60.png" style="max-width: 100%; height: auto;">
+
+  </details>"
 
 
 ---
