@@ -224,6 +224,8 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+- ![Uploading trello.png…]()
+
   ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/1.jpeg)
   ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/2.jpeg)
   ![Screenshot 3](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/3.jpeg)
