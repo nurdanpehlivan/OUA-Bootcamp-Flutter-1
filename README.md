@@ -220,7 +220,8 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/2022-05-22%2019_25_30-Window.png) 
+![trello](https://github.com/user-attachments/assets/d4e5e038-5ee0-4391-862a-546bdce128c9)
+
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
