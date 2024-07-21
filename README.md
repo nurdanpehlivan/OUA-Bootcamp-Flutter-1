@@ -215,7 +215,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 ---
 # Sprint 2
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 25 Puan
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
 
@@ -229,11 +229,11 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   ![Screenshot 3](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/3.jpeg)
 - **Sprint Review**: 
 Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
-Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
+Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+  - Takım üyelerinin son sprintte daha fazla aktif olması gerektiğine vurgu yapılmıştır.
 
 
 ---
