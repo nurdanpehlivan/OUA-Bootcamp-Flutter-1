@@ -38,6 +38,7 @@ dependencies:
   http: ^1.2.1
   url_launcher: ^6.3.0
   webview_flutter: ^4.8.0
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -62,9 +63,15 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/CodeWiseLogo.jpg
+    - assets/Avatar.png
+    - assets/Avatar1.png
+    - assets/Avatar2.png
+    - assets/i18n/en.json
+    - assets/i18n/tr.json
+    - assets/i18n/de.json
+    - assets/i18n/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
