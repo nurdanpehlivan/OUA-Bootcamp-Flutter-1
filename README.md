@@ -214,8 +214,13 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 ---
 # Sprint 2
+- **Sprint Notları**: Sprint 2 boyunca, CodeWise uygulamasının tasarım geliştirmeleri tamamlandı. Sprint 1'de belirlenen temel ekran tasarımları (ana sayfa, , kayıt ve giriş,kategoriler, profil ve profil düzenleme, ) kullanıcı geri bildirimleri ve yapay zeka entegrasyon ihtiyaçları doğrultusunda detaylandırıldı. Kullanıcı etkileşimleri iyileştirildi, görsel öğeler zenginleştirildi ve uygulama genelinde tutarlı bir kullanıcı deneyimi sağlandı. Renk paleti, tipografi ve görsel stil seçimleri üzerinde yapılan ince ayarlarla uygulama estetiği güçlendirildi.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 25 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması, ikinci sprintin 120 ile devam etmesi gerektiğine karar verildi.
+
+
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
 
@@ -225,18 +230,17 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-- ![Uploading trello.png…]()
 
-  ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/1.jpeg)
-  ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/2.jpeg)
-  ![Screenshot 3](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/3.jpeg)
-- **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
-Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov
+
+- **Sprint Review**:
+- Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. Uygulamanın temel tasarımı belirlenmiş ve üzerinde çalışılmaya başlanmıştır. 
+
+- Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin son sprintte daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
+  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
 
 
 ---
