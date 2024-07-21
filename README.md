@@ -208,6 +208,26 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   - **Sprint Review Participants:** `Adem Han`, `Nurdan Pehlivan`, `Abdullah Bahromov`, `Aleyna Parkaz`, `Abdüssamed Güldal`
 
+  - **Sprint Notlar2**:
+    - Proje yönetimi için  `Trello` kullanılması kararlaştırıldı.
+
+    - UI tasarımları için `Figma` kullanılması kararlaştırıldı.
+
+    - Durum yönetimi için `Discord` kullanılması kararlaştırıldı.
+
+    - Giriş sistemi olarak  `email login` kullanılması kararlaştırıldı.
+
+    - Giriş sistemini takiben `identity verification` yapılmasına karar verildi.
+
+  - **Sprint Değerlendirmesi:**
+    - Uygulamanın adı üzerinde çalıştık ve 'CodeWise' uygulama isminde karar kıldık
+
+    - Bu sprintte zorlandığımız konulardan biri tasarımdı. Tasarım üzerinde fazla durduk ve biraz zaman kaybettik. Bu yüzden logo üzerine de bir çalışma yapmamıştık. Bu konuda da biraz gecikme yaşandı.
+
+    - Genel olarak güzel bir sprint geçirdik.
+
+  - **Sprint Review Participants:** `Adem Han`, `Nurdan Pehlivan`, `Abdullah Bahromov`, `Aleyna Parkaz`, `Abdüssamed Güldal`
+
   ---
 
   
