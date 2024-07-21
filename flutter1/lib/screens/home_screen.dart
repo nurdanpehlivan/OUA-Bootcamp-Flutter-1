@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -18,10 +19,57 @@ class HomeScreen extends StatelessWidget {
             _buildBottomNavBar(),
           ],
         ),
+=======
+    final User? user = FirebaseAuth.instance.currentUser;
+
+    List<Widget> _widgetOptions = <Widget>[
+      HomeScreenContent(user: user), // Kullanıcıyı geçiyoruz
+      const CategoriesPage(), // Kategoriler sayfasını buraya ekleyin
+      const Center(
+          child: Text('Ayarlar Ekranı',
+              style: TextStyle(
+                  color: Colors.white))), // Diğer sayfalar için örnek içerik
+    ];
+
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: const Text('Ana Sayfa'),
+        backgroundColor: Colors.purple,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () {
+              Navigator.pushNamed(context, '/profile');
+            },
+          ),
+        ],
+      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Ana Sayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Kategoriler',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Ayarlar',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.purple,
+        onTap: _onItemTapped,
+>>>>>>> cc8d1f8efe88f8e16e3306e87ec8200a4d146fac
       ),
     );
   }
 
+<<<<<<< HEAD
   Widget _buildHeader() {
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -122,6 +170,25 @@ class HomeScreen extends StatelessWidget {
           child: Text(
             'Yazılım Dilleri',
             style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+=======
+class HomeScreenContent extends StatelessWidget {
+  final User? user;
+
+  const HomeScreenContent({super.key, this.user});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Hoşgeldin, ${user?.displayName ?? 'Kullanıcı'}!',
+              style: const TextStyle(fontSize: 24, color: Colors.white),
+            ),
+>>>>>>> cc8d1f8efe88f8e16e3306e87ec8200a4d146fac
           ),
         ),
         SizedBox(height: 10),

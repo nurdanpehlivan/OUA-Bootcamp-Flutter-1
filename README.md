@@ -1,10 +1,10 @@
-  <html>
+<html>
   <body>
 
 
   # **Ekip & Ürün Adı**
 
-  ### **`CodeWise`**
+  ### **CodeWise**
   <table>
     <tr>
       <td><img src="bootcamp/general/squarepics/CodeWise.png"" /></td>
@@ -132,11 +132,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   --- 
 
 
-
   <details>
-    <summary><h1>Sprint 1</h1></summary>
-
-
+    <summary><h1>Sprintler</h1></summary>
+  <h1>Sprint 1</h1>
   <details>
     <summary><h3>Sprint 1 - Uygulama Ekran Tasarımları</h3></summary>
   <table style="width: 100%;">
@@ -187,17 +185,20 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     <img src="bootcamp/sprintOne/boardupdate/15.png" style="max-width: 100%; height: auto;">
   </details>"
 
+  - **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
+
+  - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 16 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'e puanı 15 olarak belirledik
 
   - **Sprint Notları**:
-    - Proje yönetimi için  `Trello` kullanılması kararlaştırıldı.
+    - Proje yönetimi için  Trello kullanılması kararlaştırıldı.
 
-    - UI tasarımları için `Figma` kullanılması kararlaştırıldı.
+    - UI tasarımları için Figma kullanılması kararlaştırıldı.
 
-    - Durum yönetimi için `Discord` kullanılması kararlaştırıldı.
+    - Durum yönetimi için Discord kullanılması kararlaştırıldı.
 
-    - Giriş sistemi olarak  `email login` kullanılması kararlaştırıldı.
+    - Giriş sistemi olarak  email login kullanılması kararlaştırıldı.
 
-    - Giriş sistemini takiben `identity verification` yapılmasına karar verildi.
+    - Giriş sistemini takiben identity verification yapılmasına karar verildi.
 
   - **Sprint Değerlendirmesi:**
     - Uygulamanın adı üzerinde çalıştık ve 'CodeWise' uygulama isminde karar kıldık
@@ -206,11 +207,51 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
     - Genel olarak güzel bir sprint geçirdik.
 
-  - **Sprint Review Participants:** `Adem Han`, `Nurdan Pehlivan`, `Abdullah Bahromov`, `Aleyna Parkaz`, `Abdüssamed Güldal`
+  - **Sprint Review Participants:** Adem Han, Nurdan Pehlivan, Abdullah Bahromov, Aleyna Parkaz, Abdüssamed Güldal
 
-  ---
 
-  
+
+
+---
+# Sprint 2
+- **Sprint Notları**:
+- Sprint 2 boyunca, CodeWise uygulamasının tasarım geliştirmeleri tamamlandı.
+- Sprint 1'de belirlenen temel ekran tasarımları (ana sayfa, kayıt ve giriş, kategoriler, profil ve profil düzenleme, ) kullanıcı geri bildirimleri ve farklı dil seçenekleri ihtiyaçlar doğrultusunda detaylandırıldı.
+- Kullanıcı etkileşimleri iyileştirildi, görsel öğeler zenginleştirildi ve uygulama genelinde tutarlı bir kullanıcı deneyimi sağlandı.
+- Renk paleti, tipografi ve görsel stil seçimleri üzerinde yapılan ince ayarlarla uygulama estetiği güçlendirildi.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 14 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 16 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 15 ile başlaması, ikinci sprintin 14 ile devam etmesi gerektiğine karar verildi.
+
+- **Daily Scrum**: Daily Scrum toplantıları hem Google Meet hem de zamansal sebeplerle WhatsApp üzerinden yapılmaktadır. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
+- 
+ ![dailyscrum2](https://github.com/user-attachments/assets/15232ee2-e987-4203-846b-c0e314677318)
+ ![dailyscrum](https://github.com/user-attachments/assets/f930119e-98b7-4777-8f4b-20065ac534e7)
+
+- **Sprint Board Update**: Sprint board screenshotları:
+- 
+![trello](https://github.com/user-attachments/assets/d4e5e038-5ee0-4391-862a-546bdce128c9)
+
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+
+
+- **Sprint Review**:
+  Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. Uygulamanın temel tasarımı belirlenmiş ve üzerinde çalışılmaya başlanmıştır. 
+
+- Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov
+
+- **Sprint Retrospective:**
+
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
+  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+
+
+---
+
+
+
   </body>
   </html>
-
