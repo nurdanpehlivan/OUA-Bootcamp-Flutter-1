@@ -22,10 +22,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       routes: {
-        '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
-        '/home': (context) => const HomeScreen(),
+        '/home': (context) => HomeScreen(),
       },
     );
   }
