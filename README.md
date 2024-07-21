@@ -247,9 +247,6 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 ---
 
-## Product Backlog URL
-
-[Flutter Team 52 Miro Backlog Board](https://miro.com/app/board/uXjVO4kRs2w=/)
 
 
   </body>
