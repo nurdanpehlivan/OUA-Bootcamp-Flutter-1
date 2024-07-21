@@ -135,7 +135,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 
   <details>
-    <summary><h1>Sprint 1</h1></summary>
+    <summary><h2>Sprint 1</h2></summary>
 
 
   <details>
