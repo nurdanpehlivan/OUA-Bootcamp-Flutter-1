@@ -134,7 +134,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   <details>
     <summary><h1>Sprintler</h1></summary>
-  <h1>Sprintler</h1>
+  <h1>Sprint 1</h1>
   <details>
     <summary><h3>Sprint 1 - Uygulama Ekran Tasarımları</h3></summary>
   <table style="width: 100%;">
@@ -185,6 +185,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     <img src="bootcamp/sprintOne/boardupdate/15.png" style="max-width: 100%; height: auto;">
   </details>"
 
+  - **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
+
+  - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 16 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'e puanı 15 olarak belirledik
 
   - **Sprint Notları**:
     - Proje yönetimi için  Trello kullanılması kararlaştırıldı.
@@ -217,10 +220,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - Kullanıcı etkileşimleri iyileştirildi, görsel öğeler zenginleştirildi ve uygulama genelinde tutarlı bir kullanıcı deneyimi sağlandı.
 - Renk paleti, tipografi ve görsel stil seçimleri üzerinde yapılan ince ayarlarla uygulama estetiği güçlendirildi.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 14 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması, ikinci sprintin 120 ile devam etmesi gerektiğine karar verildi.
-
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 16 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 15 ile başlaması, ikinci sprintin 14 ile devam etmesi gerektiğine karar verildi.
 
 - **Daily Scrum**: Daily Scrum toplantıları hem Google Meet hem de zamansal sebeplerle WhatsApp üzerinden yapılmaktadır. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
 - 
