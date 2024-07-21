@@ -134,7 +134,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   <details>
     <summary><h1>Sprint 1</h1></summary>
 
-
+</details>
   <details>
     <summary><h3>Sprint 1 - Uygulama Ekran Tasarımları</h3></summary>
   <table style="width: 100%;">
