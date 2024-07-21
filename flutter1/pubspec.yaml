@@ -38,14 +38,14 @@ dependencies:
   http: ^1.2.1
   url_launcher: ^6.3.0
   webview_flutter: ^4.8.0
-<<<<<<< HEAD
+
   intl_phone_field: ^3.2.0
-=======
+
   firebase_core: ^3.2.0
   firebase_auth: ^5.1.2
   firebase_database: ^11.0.3
   firebase_storage: ^12.1.1
->>>>>>> 6be91214e3ed02e13deb7bc0860578d9ed8cffc5
+
 
 dev_dependencies:
   flutter_test:
