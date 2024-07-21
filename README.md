@@ -208,6 +208,8 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   - **Sprint Review Participants:** `Adem Han`, `Nurdan Pehlivan`, `Abdullah Bahromov`, `Aleyna Parkaz`, `Abdüssamed Güldal`
 
+---
+
 <details>
     <summary><h1>Sprint 2</h1></summary>
 
