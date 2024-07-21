@@ -132,11 +132,10 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   --- 
 
 
-
-  <summary><h1>Sprintler</h1></summary>
   <details>
-    <summary><h2>Sprint 1</h2></summary>
-
+    <summary><h1>Sprintler</h1></summary>
+  ---
+  # Sprint 1
 
   <details>
     <summary><h3>Sprint 1 - Uygulama Ekran Tasarımları</h3></summary>
