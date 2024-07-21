@@ -214,19 +214,18 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 ---
 # Sprint 2
-- **Sprint Notları**: Sprint 2 boyunca, CodeWise uygulamasının tasarım geliştirmeleri tamamlandı. Sprint 1'de belirlenen temel ekran tasarımları (ana sayfa, , kayıt ve giriş,kategoriler, profil ve profil düzenleme, ) kullanıcı geri bildirimleri ve yapay zeka entegrasyon ihtiyaçları doğrultusunda detaylandırıldı. Kullanıcı etkileşimleri iyileştirildi, görsel öğeler zenginleştirildi ve uygulama genelinde tutarlı bir kullanıcı deneyimi sağlandı. Renk paleti, tipografi ve görsel stil seçimleri üzerinde yapılan ince ayarlarla uygulama estetiği güçlendirildi.
+- **Sprint Notları**: Sprint 2 boyunca, CodeWise uygulamasının tasarım geliştirmeleri tamamlandı. Sprint 1'de belirlenen temel ekran tasarımları (ana sayfa, kayıt ve giriş, kategoriler, profil ve profil düzenleme, ) kullanıcı geri bildirimleri ve farklı dil seçenekleri ihtiyaçlar doğrultusunda detaylandırıldı. Kullanıcı etkileşimleri iyileştirildi, görsel öğeler zenginleştirildi ve uygulama genelinde tutarlı bir kullanıcı deneyimi sağlandı. Renk paleti, tipografi ve görsel stil seçimleri üzerinde yapılan ince ayarlarla uygulama estetiği güçlendirildi.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması, ikinci sprintin 120 ile devam etmesi gerektiğine karar verildi.
 
 
-
 - **Daily Scrum**: Daily Scrum toplantıları hem Google Meet hem de zamansal sebeplerle WhatsApp üzerinden yapılmaktadır. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
  ![dailyscrum2](https://github.com/user-attachments/assets/15232ee2-e987-4203-846b-c0e314677318)
  ![dailyscrum](https://github.com/user-attachments/assets/f930119e-98b7-4777-8f4b-20065ac534e7)
 
-- **Sprint board update**: Sprint board screenshotları: 
+- **Sprint Board Update**: Sprint board screenshotları: 
 ![trello](https://github.com/user-attachments/assets/d4e5e038-5ee0-4391-862a-546bdce128c9)
 
 
