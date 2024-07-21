@@ -131,7 +131,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
   --- 
 
-
+ <details>
+    <summary><h1>Sprint 2</h1></summary>
+ </details>
 
   <details>
     <summary><h1>Sprint 1</h1></summary>
@@ -209,9 +211,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   - **Sprint Review Participants:** Adem Han, Nurdan Pehlivan, Abdullah Bahromov, Aleyna Parkaz, Abdüssamed Güldal
 
 ---
- <details>
-    <summary><h1>Sprint 2</h1></summary>
- </details>
+
 
   </body>
   </html>
