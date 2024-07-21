@@ -222,7 +222,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 
 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği Readme'de tarafımızdan paylaşılmaktadır: ![dailyscrum](https://github.com/user-attachments/assets/f930119e-98b7-4777-8f4b-20065ac534e7)
+- **Daily Scrum**: Daily Scrum toplantıları hem Google Meet hem de zamansal sebeplerle WhatsApp üzerinden yapılmaktadır. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
+- ![dailyscrum2](https://github.com/user-attachments/assets/15232ee2-e987-4203-846b-c0e314677318)
+- ![dailyscrum](https://github.com/user-attachments/assets/f930119e-98b7-4777-8f4b-20065ac534e7)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![trello](https://github.com/user-attachments/assets/d4e5e038-5ee0-4391-862a-546bdce128c9)
