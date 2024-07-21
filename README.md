@@ -211,6 +211,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 ---
  <details>
     <summary><h1>Sprint 2</h1></summary>
+ </details>
 
   </body>
   </html>
