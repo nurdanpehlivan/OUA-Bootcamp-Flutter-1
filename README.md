@@ -249,10 +249,21 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
   - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
  
 <details>
-    <summary><h3>Sprintde Geliştirilen Ekranlar:</h3></summary>
+    <summary><h3>Sprint 2 de Geliştirilen Ekranlar:</h3></summary>
     <img src="bootcamp/sprintOne/screenshots/60.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/61.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/62.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/63.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/64.png" style="max-width: 100%; height: auto;">
 
-  </details>"
+</details>
+
+<details>
+    <summary><h3>Sprint 2 de Geliştirilen Ekranlar:</h3></summary>
+    <img src="bootcamp/sprintOne/screenshots/70.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/71.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/72.png" style="max-width: 100%; height: auto;">
+</details>
 
 
 ---
