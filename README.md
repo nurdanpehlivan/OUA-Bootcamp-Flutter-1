@@ -241,7 +241,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - **Sprint Review**:
   Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. Uygulamanın temel tasarımı belirlenmiş ve üzerinde çalışılmaya başlanmıştır. 
 
-- Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov
+- Sprint Review katılımcıları: Nurdan Pehlivan, Abdullah Bahromov,Abdüssamed Güldal,Aleyna Parkaz,Adem Han
 
 - **Sprint Retrospective:**
 
