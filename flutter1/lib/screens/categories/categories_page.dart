@@ -7,7 +7,10 @@ class CategoriesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Kategoriler'),
+        title: const Text(
+          'Kategoriler',
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -20,31 +23,34 @@ class CategoriesPage extends StatelessWidget {
         children: [
           CategoryCard(
             title: 'Mobil Geliştirme',
-            imageUrl: '',
+            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
             onTap: () {
-              // Kategoriye tıklanınca yapılacak işlem
-              Navigator.pushNamed(context, '/categoryDetail', arguments: 'Mobil Geliştirme');
+              Navigator.pushNamed(context, '/categoryDetail',
+                  arguments: 'Mobil Geliştirme');
             },
           ),
           CategoryCard(
             title: 'Web Geliştirme',
-            imageUrl: '',
+            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail', arguments: 'Web Geliştirme');
+              Navigator.pushNamed(context, '/categoryDetail',
+                  arguments: 'Web Geliştirme');
             },
           ),
           CategoryCard(
             title: 'Veri Bilimi',
-            imageUrl: '',
+            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail', arguments: 'Veri Bilimi');
+              Navigator.pushNamed(context, '/categoryDetail',
+                  arguments: 'Veri Bilimi');
             },
           ),
           CategoryCard(
             title: 'Yapay Zeka',
-            imageUrl: '',
+            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail', arguments: 'Yapay Zeka');
+              Navigator.pushNamed(context, '/categoryDetail',
+                  arguments: 'Yapay Zeka');
             },
           ),
           // Diğer kategoriler buraya eklenebilir
@@ -72,10 +78,24 @@ class CategoryCard extends StatelessWidget {
       onTap: onTap,
       child: Card(
         color: Colors.white24,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(imageUrl, height: 120, fit: BoxFit.cover),
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0),
+              ),
+              child: Image.network(
+                imageUrl,
+                height: 120,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
