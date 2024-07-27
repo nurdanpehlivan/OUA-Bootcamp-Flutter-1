@@ -45,10 +45,10 @@ dependencies:
   firebase_auth: ^5.1.2
   firebase_database: ^11.0.3
   firebase_storage: ^12.1.1
-  easy_localization: ^3.0.7
   image_picker: ^1.1.2
   flutter_libphonenumber: ^2.2.3
   cloud_firestore: ^5.1.0
+  excel: ^4.0.3
 
 
 dev_dependencies:
@@ -80,12 +80,10 @@ flutter:
     - assets/Avatar.png
     - assets/Avatar1.png
     - assets/Avatar2.png
-    - assets/i18n/en.json
-    - assets/i18n/tr.json
-    - assets/i18n/de.json
-    - assets/i18n/
     - assets/flutter_logo.png
     - assets/python_logo.png
+    - assets/Flutter.png
+    - assets/quiz/flutter_quiz_questions.xlsx
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

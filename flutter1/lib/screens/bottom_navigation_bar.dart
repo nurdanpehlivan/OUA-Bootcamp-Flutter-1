@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/screens/constants.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  final int currentIndex;
-  final ValueChanged<int> onTap;
+  final int selectedIndex;
+  final ValueChanged<int> onItemTapped;
 
   const CustomBottomNavigationBar({
-    required this.currentIndex,
-    required this.onTap,
-    super.key,
-  });
+    Key? key,
+    required this.selectedIndex,
+    required this.onItemTapped,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +24,15 @@ class CustomBottomNavigationBar extends StatelessWidget {
           label: 'Kategoriler',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favoriler',
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.search),
-          label: 'Ara',
+          label: 'Arama Motoru', // Arama motoru etiketi
         ),
       ],
-      currentIndex: currentIndex,
-      selectedItemColor: Colors.purple,
-      unselectedItemColor: Colors.white,
-      backgroundColor: Colors.black,
-      onTap: onTap,
+      currentIndex: selectedIndex,
+      selectedItemColor: AppColors.buttonColor,
+      unselectedItemColor: Colors.grey,
+      backgroundColor: AppColors.backgroundColor,
+      onTap: onItemTapped,
     );
   }
 }

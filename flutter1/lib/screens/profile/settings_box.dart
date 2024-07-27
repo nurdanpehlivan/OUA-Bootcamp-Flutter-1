@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import '../register/login_screen.dart';
+import '../register/login_screen.dart'; // Kendi dosya yapınıza göre düzenleyin
 
-class SettingsBox extends StatelessWidget {
-  final Function(String) onLanguageChange;
+class SettingsBox extends StatefulWidget {
+  const SettingsBox({super.key});
 
-  const SettingsBox({super.key, required this.onLanguageChange});
+  @override
+  _SettingsBoxState createState() => _SettingsBoxState();
+}
 
+class _SettingsBoxState extends State<SettingsBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 270,
+      height: 300, // Yüksekliği biraz artırdık
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -31,11 +34,14 @@ class SettingsBox extends StatelessWidget {
             subtitle: 'İstatistikler görüntüle',
           ),
           const SizedBox(height: 16),
-          // Dil Seçenekleri
-          // LanguageSelector(
-          //   currentLanguageCode: context.locale.languageCode,
-          //   onLanguageChange: onLanguageChange,
-          // ),
+          _buildOption(
+            icon: Icons.calendar_today,
+            title: 'Günlük Yoklama',
+            subtitle: 'Günlük yoklama yap',
+            onTap: () {
+              // Günlük Yoklama sayfasına geçiş kodu buraya eklenebilir.
+            },
+          ),
           const SizedBox(height: 16),
           _buildOption(
             icon: Icons.exit_to_app,

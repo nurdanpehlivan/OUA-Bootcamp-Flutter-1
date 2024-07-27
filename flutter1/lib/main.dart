@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter1/screens/categories/categories_page.dart';
 import 'package:flutter1/screens/home/home_screen.dart';
-import 'package:flutter1/screens/profile/profile_screen.dart';
 import 'package:flutter1/screens/register/login_screen.dart';
 import 'package:flutter1/screens/register/register_screen.dart';
+import 'package:flutter1/screens/profile/profile_screen.dart';
+import 'package:flutter1/screens/categories/categories_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,11 +30,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
         '/home': (context) => const HomeScreen(),
-        '/profile': (context) => ProfileScreen(
-              onLanguageChange: (String language) {
-                // Dil değiştirildiğinde yapılacak işlemler
-              },
-            ),
+        '/profile': (context) => ProfileScreen(),
         '/categories': (context) => const CategoriesPage(),
       },
     );
@@ -55,7 +51,7 @@ class AuthWrapper extends StatelessWidget {
             body: Center(child: CircularProgressIndicator()),
           );
         } else if (snapshot.hasData) {
-          // Eğer kullanıcı oturum açmışsa anasayfaya yönlendir
+          // Eğer kullanıcı oturum açmışsa ana sayfaya yönlendir
           return const HomeScreen();
         } else {
           // Eğer kullanıcı oturum açmamışsa kayıt sayfasına yönlendir

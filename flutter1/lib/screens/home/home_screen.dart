@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter1/screens/bottom_navigation_bar.dart';
 import 'package:flutter1/screens/categories/categories_page.dart';
 import 'package:flutter1/screens/constants.dart';
 import 'home_screen_content.dart';
@@ -27,9 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Widget> widgetOptions = <Widget>[
       HomeScreenContent(user: user), // Kullanıcıyı geçiyoruz
       const CategoriesPage(), // Kategoriler sayfasını buraya ekliyoruz
-      const Center(
-        child: Text('Ayarlar Ekranı',
-            style: TextStyle(color: AppColors.textColor)),
+      Center(
+        child: Text(
+          'Arama Motoru', // Arama motoru metni
+          style: TextStyle(color: AppColors.textColor),
+        ),
       ), // Diğer sayfalar için örnek içerik
     ];
 
@@ -37,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: const Text(
-          'Ana Sayfa',
+          'Ana Sayfa', // Ana Sayfa başlığı
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -54,26 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: widgetOptions.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.category),
-            label: 'Kategoriler',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Ayarlar',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: AppColors.buttonColor,
-        unselectedItemColor: Colors.grey,
-        backgroundColor: AppColors.backgroundColor,
-        onTap: _onItemTapped,
+      bottomNavigationBar: CustomBottomNavigationBar(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
     );
   }

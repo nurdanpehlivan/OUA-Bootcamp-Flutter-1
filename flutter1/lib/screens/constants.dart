@@ -53,7 +53,7 @@ class AppDecorations {
   }) {
     return InputDecoration(
       labelText: labelText,
-      labelStyle: const TextStyle(color: AppColors.textColor),
+      labelStyle: TextStyle(color: AppColors.textColor),
       prefixIcon: Icon(prefixIcon, color: AppColors.iconColor),
       fillColor: AppColors.inputFillColor,
       filled: true,
@@ -71,6 +71,35 @@ class AppButtonStyles {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
     ),
-    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
   );
+
+  // Add more button styles here if needed
+}
+
+class AppUtils {
+  static void showErrorDialog(BuildContext context, String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(AppStrings.errorTitle),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(AppStrings.okButton),
+          ),
+        ],
+      ),
+    );
+  }
+
+  static void showToast(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: AppColors.buttonColor,
+      ),
+    );
+  }
 }
