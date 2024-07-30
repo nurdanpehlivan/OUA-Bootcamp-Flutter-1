@@ -1,12 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:csv/csv.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter1/screens/constants.dart';
-import 'package:flutter1/screens/quiz/flutterquiz.dart'; // Yeni sayfanın import edilmesi
+import 'package:flutter1/screens/quiz/flutterquiz.dart';
+import '../articles/articles_detail_screen.dart';
+import '../articles/articles_screen.dart';
 
-class HomeScreenContent extends StatelessWidget {
+class HomeScreenContent extends StatefulWidget {
   final User? user;
 
   const HomeScreenContent({super.key, this.user});
+
+  @override
+  _HomeScreenContentState createState() => _HomeScreenContentState();
+}
+
+class _HomeScreenContentState extends State<HomeScreenContent> {
+  List<List<dynamic>> csvData = [];
+  List<Map<String, String>> articles = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadArticles();
+  }
+
+  Future<void> _loadArticles() async {
+    final rawData = await rootBundle.loadString('assets/articles/articles.csv');
+    List<List<dynamic>> data = const CsvToListConverter().convert(rawData);
+
+    // Skip the header row and take the first two rows
+    final List<Map<String, String>> fetchedArticles = [];
+    for (int i = 1; i <= 2 && i < data.length; i++) {
+      final title = data[i][0];
+      final content = data[i][1];
+      fetchedArticles.add({'title': title, 'content': content});
+    }
+
+    setState(() {
+      articles = fetchedArticles;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +52,19 @@ class HomeScreenContent extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(AppDimensions.padding),
             child: Text(
-              'Hoşgeldin, ${user?.displayName ?? 'Kullanıcı'}!',
-              style: const TextStyle(fontSize: 24, color: AppColors.textColor),
+              'Hoşgeldin, ${widget.user?.displayName ?? 'Kullanıcı'}!',
+              style: const TextStyle(
+                fontSize: 24,
+                color: AppColors.textColor,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: AppDimensions.spacing),
-          _buildArticlesSection(context), // Bağlantı işlevselliği ekledik
+          _buildArticlesSection(context),
           const SizedBox(height: AppDimensions.spacing),
-          _buildProgrammingLanguagesSection(
-              context), // Bağlantı işlevselliği ekledik
+          _buildProgrammingLanguagesSection(context),
         ],
       ),
     );
@@ -40,26 +79,60 @@ class HomeScreenContent extends StatelessWidget {
           child: Text(
             'Makaleler',
             style: TextStyle(
-                color: AppColors.textColor,
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
+              color: AppColors.textColor,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Sora",
+            ),
           ),
         ),
         const SizedBox(height: AppDimensions.smallSpacing),
         SizedBox(
-          height: 200,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
+          height: 100,
+          child: Stack(
             children: [
-              _buildArticleCard(
-                'Flutter ile Mobil Uygulama Geliştirmenin Avantajları',
-                'https://via.placeholder.com/150',
-                context,
+              ListView(
+                scrollDirection: Axis.horizontal,
+                children: articles.map((article) {
+                  return _buildArticleCard(
+                    article['title'] ?? '',
+                    context,
+                  );
+                }).toList(),
               ),
-              _buildArticleCard(
-                'Backend Develop',
-                'https://via.placeholder.com/150',
-                context,
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: Padding(
+                  padding: const EdgeInsets.all(AppDimensions.padding),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ArticlesPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.inputFillColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 12.0),
+                    ),
+                    child: const Text(
+                      'Daha Fazla',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Sora",
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -68,50 +141,45 @@ class HomeScreenContent extends StatelessWidget {
     );
   }
 
-  Widget _buildArticleCard(
-      String title, String imagePath, BuildContext context) {
+  Widget _buildArticleCard(String title, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Makale başlığına tıklandığında yapılacak işlemler
-        print('$title clicked');
-      },
-      child: Container(
-        width: 300,
-        margin: const EdgeInsets.only(left: AppDimensions.padding),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
-          image: DecorationImage(
-            image: AssetImage(imagePath),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Colors.transparent, Colors.black.withOpacity(0.7)],
+        final article =
+            articles.firstWhere((article) => article['title'] == title);
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ArticleDetailPage(
+              title: article['title'] ?? '',
+              content: article['content'] ?? '',
             ),
           ),
-          padding: const EdgeInsets.all(AppDimensions.padding),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                    color: AppColors.textColor,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 5),
-              const Text(
-                'Read More...',
-                style: TextStyle(color: Colors.white70),
-              ),
-            ],
+        );
+      },
+      child: Container(
+        width: 200,
+        margin: const EdgeInsets.only(left: AppDimensions.padding),
+        padding: const EdgeInsets.all(AppDimensions.padding),
+        decoration: BoxDecoration(
+          color: AppColors.buttonColor,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 3,
+              blurRadius: 7,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
@@ -127,9 +195,11 @@ class HomeScreenContent extends StatelessWidget {
           child: Text(
             'Yazılım Dilleri',
             style: TextStyle(
-                color: AppColors.textColor,
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
+              color: AppColors.textColor,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Sora",
+            ),
           ),
         ),
         const SizedBox(height: AppDimensions.smallSpacing),
@@ -147,8 +217,7 @@ class HomeScreenContent extends StatelessWidget {
         if (name == 'Flutter') {
           Navigator.push(
             context,
-            MaterialPageRoute(
-                builder: (context) => FlutterPage()), // Yeni sayfaya geçiş
+            MaterialPageRoute(builder: (context) => FlutterPage()),
           );
         }
         // Diğer diller için başka sayfalara yönlendirme ekleyebilirsin
@@ -161,6 +230,14 @@ class HomeScreenContent extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.inputFillColor,
           borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: Row(
           children: [

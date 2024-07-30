@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter1/screens/constants.dart';
+import '../constants.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   late String _email;
   late String _password;
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +64,10 @@ class _LoginScreenState extends State<LoginScreen> {
           _buildEmailField(),
           const SizedBox(height: AppDimensions.spacing),
           _buildPasswordField(),
-          const SizedBox(height: AppDimensions.spacing),
-          _buildLoginButton(),
           const SizedBox(height: AppDimensions.smallSpacing),
           _buildForgotPasswordButton(),
+          const SizedBox(height: AppDimensions.spacing),
+          _buildLoginButton(),
           const SizedBox(height: AppDimensions.spacing),
           _buildRegisterButton(),
         ],
@@ -106,14 +107,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildLoginButton() {
-    return ElevatedButton(
-      onPressed: _login,
-      style: AppButtonStyles.primaryButton,
-      child: const Text(AppStrings.loginButton),
-    );
-  }
-
   Widget _buildForgotPasswordButton() {
     return Align(
       alignment: Alignment.centerRight,
@@ -127,6 +120,23 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  Widget _buildLoginButton() {
+    return _isLoading
+        ? const CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(AppColors.buttonColor),
+          )
+        : ElevatedButton(
+            onPressed: _login,
+            style: AppButtonStyles.primaryButton,
+            child: const Text(
+              AppStrings.loginButton,
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          );
+  }
+
   Widget _buildRegisterButton() {
     return TextButton(
       onPressed: () => Navigator.pushNamed(context, '/register'),
@@ -138,31 +148,42 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _login() async {
     if (_formKey.currentState?.validate() ?? false) {
       _formKey.currentState!.save();
+      setState(() {
+        _isLoading = true;
+      });
       try {
         await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: _email,
           password: _password,
         );
+        setState(() {
+          _isLoading = false;
+        });
+        AppUtils.showToast(context, "Giriş başarılı!");
         Navigator.pushReplacementNamed(context, '/home');
       } on FirebaseAuthException catch (e) {
-        _showErrorDialog(e.message ?? AppStrings.unknownError);
+        setState(() {
+          _isLoading = false;
+        });
+        String errorMessage;
+        switch (e.code) {
+          case 'invalid-email':
+            errorMessage = 'Geçersiz email adresi';
+            break;
+          case 'user-disabled':
+            errorMessage = 'Kullanıcı devre dışı bırakılmış';
+            break;
+          case 'user-not-found':
+            errorMessage = 'Kullanıcı bulunamadı';
+            break;
+          case 'wrong-password':
+            errorMessage = 'Yanlış şifre';
+            break;
+          default:
+            errorMessage = AppStrings.unknownError;
+        }
+        AppUtils.showErrorDialog(context, errorMessage);
       }
     }
-  }
-
-  void _showErrorDialog(String message) {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text(AppStrings.errorTitle),
-        content: Text(message),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text(AppStrings.okButton),
-          )
-        ],
-      ),
-    );
   }
 }

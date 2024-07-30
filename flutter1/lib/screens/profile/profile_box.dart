@@ -48,6 +48,7 @@ class ProfileBox extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        fontFamily: "Sora",
                       ),
                     ),
                     GestureDetector(
@@ -64,6 +65,7 @@ class ProfileBox extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.blue,
+                          fontFamily: "Sora",
                         ),
                       ),
                     ),
@@ -76,6 +78,7 @@ class ProfileBox extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
+                    fontFamily: "Sora",
                   ),
                 ),
               ],

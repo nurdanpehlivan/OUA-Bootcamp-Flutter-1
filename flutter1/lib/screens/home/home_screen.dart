@@ -28,10 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Widget> widgetOptions = <Widget>[
       HomeScreenContent(user: user), // Kullanıcıyı geçiyoruz
       const CategoriesPage(), // Kategoriler sayfasını buraya ekliyoruz
-      Center(
+      const Center(
         child: Text(
           'Arama Motoru', // Arama motoru metni
-          style: TextStyle(color: AppColors.textColor),
+          style: TextStyle(
+            color: AppColors.textColor,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ), // Diğer sayfalar için örnek içerik
     ];
@@ -43,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
           'Ana Sayfa', // Ana Sayfa başlığı
           style: TextStyle(
             color: Colors.white,
+            fontFamily: "Sora",
             fontWeight: FontWeight.bold,
           ),
         ),

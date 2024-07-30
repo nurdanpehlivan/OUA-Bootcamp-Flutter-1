@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const backgroundColor = Colors.black;
   static const textColor = Colors.white;
+  static const textColorBlack = Colors.black;
   static const iconColor = Colors.white;
   static const buttonColor = Color(0xFF773BFF);
   static const inputFillColor = Colors.white24;
@@ -38,12 +39,13 @@ class AppStrings {
 
   // Error messages
   static const errorTitle = 'Hata';
-  static const unknownError = 'Bilinmeyen bir hata oluştu';
+  static const unknownError =
+      'Email veya şifreniz yanlış. Lütfen tekrar deneyin!';
   static const okButton = 'Tamam';
 }
 
 class AppAssets {
-  static const logo = 'assets/CodeWiseLogo.jpg';
+  static const logo = 'assets/logo/CodeWiseLogo.jpg';
 }
 
 class AppDecorations {
@@ -53,7 +55,8 @@ class AppDecorations {
   }) {
     return InputDecoration(
       labelText: labelText,
-      labelStyle: TextStyle(color: AppColors.textColor),
+      labelStyle:
+          const TextStyle(color: AppColors.textColor, fontFamily: 'Montserrat'),
       prefixIcon: Icon(prefixIcon, color: AppColors.iconColor),
       fillColor: AppColors.inputFillColor,
       filled: true,
@@ -71,10 +74,11 @@ class AppButtonStyles {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
     ),
-    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+    textStyle: const TextStyle(
+      fontFamily: 'Montserrat',
+    ), // Apply Montserrat font
   );
-
-  // Add more button styles here if needed
 }
 
 class AppUtils {
@@ -82,12 +86,12 @@ class AppUtils {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(AppStrings.errorTitle),
+        title: const Text(AppStrings.errorTitle),
         content: Text(message),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(AppStrings.okButton),
+            child: const Text(AppStrings.okButton),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart'; // AppColors ve font ayarları için
 
 class MoreOptionsBox extends StatelessWidget {
   const MoreOptionsBox({super.key});
@@ -6,10 +7,10 @@ class MoreOptionsBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: 150,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
@@ -18,7 +19,7 @@ class MoreOptionsBox extends StatelessWidget {
           ),
         ],
       ),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(AppDimensions.padding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -27,7 +28,7 @@ class MoreOptionsBox extends StatelessWidget {
             title: 'Yardım',
             subtitle: 'Yardıma mı ihtiyacınız var?',
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: AppDimensions.smallSpacing),
           _buildOption(
             icon: Icons.question_answer,
             title: 'SSS',
@@ -47,7 +48,8 @@ class MoreOptionsBox extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 20,
-          child: Icon(icon),
+          backgroundColor: AppColors.backgroundColor, // İkonun arka plan rengi
+          child: Icon(icon, color: AppColors.textColor), // İkon rengi
         ),
         const SizedBox(width: 16),
         Expanded(
@@ -57,13 +59,16 @@ class MoreOptionsBox extends StatelessWidget {
               Text(
                 title,
                 style: const TextStyle(
+                  fontFamily: 'Sora',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
               ),
               Text(
                 subtitle,
                 style: const TextStyle(
+                  fontFamily: 'Sora',
                   fontSize: 12,
                   color: Colors.grey,
                 ),
@@ -71,7 +76,7 @@ class MoreOptionsBox extends StatelessWidget {
             ],
           ),
         ),
-        const Icon(Icons.chevron_right),
+        const Icon(Icons.chevron_right, color: AppColors.textColor),
       ],
     );
   }

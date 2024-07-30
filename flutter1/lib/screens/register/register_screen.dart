@@ -15,6 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   late String _fullName;
   late String _email;
   late String _password;
+  bool _isLoading = false; // Yeni eklenen durum
 
   @override
   Widget build(BuildContext context) {
@@ -124,11 +125,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Widget _buildRegisterButton() {
-    return ElevatedButton(
-      onPressed: _register,
-      style: AppButtonStyles.primaryButton,
-      child: const Text(AppStrings.registerButton),
-    );
+    return _isLoading
+        ? const CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(AppColors.buttonColor),
+          )
+        : ElevatedButton(
+            onPressed: _register,
+            style: AppButtonStyles.primaryButton,
+            child: const Text(
+              AppStrings.registerButton,
+              style: TextStyle(color: Colors.white),
+            ),
+          );
   }
 
   Widget _buildLoginPrompt() {
@@ -144,6 +152,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> _register() async {
     if (_formKey.currentState?.validate() ?? false) {
       _formKey.currentState!.save();
+      setState(() {
+        _isLoading = true; // Yükleniyor durumunu başlat
+      });
+
       try {
         UserCredential userCredential =
             await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -164,6 +176,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
         Navigator.pushReplacementNamed(context, '/home');
       } on FirebaseAuthException catch (e) {
         _showErrorDialog(e.message ?? AppStrings.unknownError);
+      } finally {
+        setState(() {
+          _isLoading = false; // Yükleniyor durumunu sonlandır
+        });
       }
     }
   }
