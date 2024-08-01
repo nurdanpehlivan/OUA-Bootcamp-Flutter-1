@@ -9,9 +9,9 @@ class MoreOptionsBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 140,
       decoration: BoxDecoration(
-        color: Colors.black, // Arka plan rengini siyah yap
+        color: Colors.white, // Arka plan rengini siyah yap
         borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
         boxShadow: const [
           BoxShadow(
@@ -85,7 +85,7 @@ class MoreOptionsBox extends StatelessWidget {
                     fontFamily: 'Sora',
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Metin rengi beyaz
+                    color: Colors.black, // Metin rengi beyaz
                   ),
                 ),
                 Text(

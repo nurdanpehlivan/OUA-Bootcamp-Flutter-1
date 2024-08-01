@@ -77,33 +77,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-<<<<<<< HEAD
     - assets/
-    - assets/logo/
-    - assets/quiz/
-    - assets/quiz_logo/
-    - assets/articles/articles.csv
-=======
-    - assets/java_logo.jpg
-    - assets/logo/CodeWiseLogo.jpg
-    - assets/Avatar.png
-    - assets/Avatar1.png
-    - assets/Avatar2.png
-    - assets/flutter_logo.png
-    - assets/python_logo.png
-    - assets/Flutter.png
-    - assets/Java.png
-    - assets/csharp.png
-    - assets/kotlin.png
-    - assets/cpp.png
-    - assets/quiz/flutter_quiz_questions.xlsx
 
-    - assets/articles/articles.csv
+    - assets/logo/
+
+    - assets/quiz_logo/
+
+    - assets/articles/
+
     - assets/sss.csv
+
     - assets/help.csv
+    
     - assets/profilfoto.png
 
->>>>>>> 0d52a368d9add6ac523eb551955693bb95af4f3e
   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

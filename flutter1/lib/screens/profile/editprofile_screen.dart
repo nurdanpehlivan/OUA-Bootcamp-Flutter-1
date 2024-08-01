@@ -1,10 +1,9 @@
 import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:firebase_database/firebase_database.dart'; // Realtime Database için ekledik
 import '../constants.dart'; // AppColors ve font ayarları için
 
 class EditProfileScreen extends StatefulWidget {
@@ -17,11 +16,8 @@ class EditProfileScreen extends StatefulWidget {
 class _EditProfileScreenState extends State<EditProfileScreen> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _displayNameController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
-  final TextEditingController _birthDateController = TextEditingController();
   XFile? _image;
   final ImagePicker _picker = ImagePicker();
-  String? _gender;
 
   @override
   void initState() {
@@ -29,10 +25,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     final User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       _displayNameController.text = user.displayName ?? '';
-      _phoneController.text =
-          ''; // Profilde kayıtlı olan telefon numarası varsa buraya ekleyebilirsiniz
-      _birthDateController.text =
-          ''; // Profilde kayıtlı olan doğum tarihi varsa buraya ekleyebilirsiniz
     }
   }
 
@@ -63,15 +55,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           displayName: _displayNameController.text,
           photoURL: photoURL,
         );
-
-        // Diğer bilgileri Realtime Database'de güncelleyin
-        final DatabaseReference dbRef =
-            FirebaseDatabase.instance.ref().child('users').child(user.uid);
-        await dbRef.set({
-          'phone': _phoneController.text,
-          'birthDate': _birthDateController.text,
-          'gender': _gender,
-        });
 
         await FirebaseAuth.instance.currentUser?.reload();
         ScaffoldMessenger.of(context).showSnackBar(
@@ -125,62 +108,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                 ),
                 const SizedBox(height: AppDimensions.smallSpacing),
-                // Cinsiyet seçimi
-                DropdownButtonFormField<String>(
-                  value: _gender,
-                  decoration: InputDecoration(
-                    labelText: 'Cinsiyet',
-                    labelStyle: const TextStyle(
-                      fontSize: 15,
-                      color: Colors.blueGrey,
-                      fontFamily: 'Sora',
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                  ),
-                  items: ['Kadın', 'Erkek']
-                      .map((gender) => DropdownMenuItem<String>(
-                            value: gender,
-                            child: Text(gender),
-                          ))
-                      .toList(),
-                  onChanged: (value) {
-                    setState(() {
-                      _gender = value;
-                    });
-                  },
-                  validator: (value) {
-                    if (value == null) {
-                      return 'Cinsiyeti seçin';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: AppDimensions.smallSpacing),
-                // Doğum tarihi seçimi
+                // Ad Soyad girişi
                 TextFormField(
-                  controller: _birthDateController,
+                  controller: _displayNameController,
                   decoration: InputDecoration(
-                    labelText: 'Doğum Tarihi',
+                    labelText: 'Ad Soyad',
                     labelStyle: const TextStyle(
                       fontSize: 15,
-                      color: Colors.blueGrey,
+                      color: Colors.blue,
                       fontFamily: 'Sora',
                     ),
                     border: OutlineInputBorder(
@@ -202,56 +137,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           color: Colors.white), // Çizgi rengi beyaz
                     ),
                   ),
-                  readOnly: true,
-                  onTap: () async {
-                    final DateTime? pickedDate = await showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(1900),
-                      lastDate: DateTime.now(),
-                    );
-                    if (pickedDate != null) {
-                      setState(() {
-                        _birthDateController.text =
-                            '${pickedDate.day}/${pickedDate.month}/${pickedDate.year}';
-                      });
-                    }
-                  },
-                ),
-                const SizedBox(height: AppDimensions.smallSpacing),
-                // Telefon numarası girişi
-                IntlPhoneField(
-                  controller: _phoneController,
-                  decoration: InputDecoration(
-                    labelText: 'Telefon Numarası',
-                    labelStyle: const TextStyle(
-                      fontSize: 15,
-                      color: Colors.blueGrey,
-                      fontFamily: 'Sora',
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                  ),
-                  initialCountryCode: 'TR',
                   validator: (value) {
-                    if (value == null || value.number.isEmpty) {
-                      return 'Telefon numarasını girin';
+                    if (value == null || value.isEmpty) {
+                      return 'Ad Soyad girin';
                     }
                     return null;
                   },
