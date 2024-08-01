@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import '../quiz/flutter_quiz/flutterquiz_giris.dart';
+import '../quiz/java_quiz/javaquiz_giris.dart';
+import '../quiz/python_quiz/pythonquiz_giris.dart';
+import '../quiz/cpp_quiz/cpp_quiz_giris.dart';
+import '../quiz/kotlin_quiz/kotlin_quiz_giris.dart';
 
 class CategoriesPage extends StatelessWidget {
-  const CategoriesPage({Key? key}) : super(key: key);
+  const CategoriesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Kategoriler',
-          style: TextStyle(color: Colors.white),
+          'Yazılım Dilleri',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: "Sora",
+            fontWeight: FontWeight.bold,
+          ),
         ),
         centerTitle: true,
         backgroundColor: Colors.black,
@@ -22,38 +31,71 @@ class CategoriesPage extends StatelessWidget {
         mainAxisSpacing: 10.0,
         children: [
           CategoryCard(
-            title: 'Mobil Geliştirme',
-            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
+            title: 'Flutter',
+            imageUrl:
+                'assets/quiz_logo/flutter.png', // Flutter için uygun bir asset resmi
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail',
-                  arguments: 'Mobil Geliştirme');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FlutterPage(),
+                ),
+              );
             },
           ),
           CategoryCard(
-            title: 'Web Geliştirme',
-            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
+            title: 'Python',
+            imageUrl:
+                'assets/quiz_logo/python.png', // Python için uygun bir asset resmi
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail',
-                  arguments: 'Web Geliştirme');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PythonQuizGiris(),
+                ),
+              );
             },
           ),
           CategoryCard(
-            title: 'Veri Bilimi',
-            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
+            title: 'Java',
+            imageUrl:
+                'assets/quiz_logo/java.png', // Java için uygun bir asset resmi
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail',
-                  arguments: 'Veri Bilimi');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const JavaQuizGiris(),
+                ),
+              );
             },
           ),
           CategoryCard(
-            title: 'Yapay Zeka',
-            imageUrl: 'https://via.placeholder.com/150', // Geçici resim URL'si
+            title: 'C++',
+            imageUrl:
+                'assets/quiz_logo/cpp.png', // C++ için uygun bir asset resmi
             onTap: () {
-              Navigator.pushNamed(context, '/categoryDetail',
-                  arguments: 'Yapay Zeka');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CppQuizGiris(),
+                ),
+              );
             },
           ),
-          // Diğer kategoriler buraya eklenebilir
+          CategoryCard(
+            title: 'Kotlin',
+            imageUrl:
+                'assets/quiz_logo/kotlin.jpg', // Kotlin için uygun bir asset resmi
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const KotlinQuizGiris(),
+                ),
+              );
+            },
+          ),
+          // Diğer yazılım dilleri buraya eklenebilir
         ],
       ),
     );
@@ -69,8 +111,8 @@ class CategoryCard extends StatelessWidget {
     required this.title,
     required this.imageUrl,
     required this.onTap,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +131,7 @@ class CategoryCard extends StatelessWidget {
                 topLeft: Radius.circular(10.0),
                 topRight: Radius.circular(10.0),
               ),
-              child: Image.network(
+              child: Image.asset(
                 imageUrl,
                 height: 120,
                 width: double.infinity,

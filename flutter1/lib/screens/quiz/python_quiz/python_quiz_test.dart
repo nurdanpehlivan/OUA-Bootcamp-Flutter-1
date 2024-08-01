@@ -1,60 +1,53 @@
-// lib/java_quiz_test.dart
-
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:csv/csv.dart';
+import 'python_result_page.dart';
 
-class JavaQuizTest extends StatefulWidget {
+class PythonQuizTest extends StatefulWidget {
+  const PythonQuizTest({super.key});
+
   @override
-  _JavaQuizTestState createState() => _JavaQuizTestState();
+  _PythonQuizTestState createState() => _PythonQuizTestState();
 }
 
-class _JavaQuizTestState extends State<JavaQuizTest> {
+class _PythonQuizTestState extends State<PythonQuizTest> {
   int _secondsRemaining = 20;
   late Timer _timer;
   int _currentQuestionIndex = 0;
   String? _selectedOption;
   String? _correctAnswer;
   int _score = 0;
-  final List<Map<String, dynamic>> _questions = [
-    {
-      'question': 'Java hangi yıl piyasaya sürüldü?',
-      'options': ['1995', '2000', '2005', '2010'],
-      'answer': '1995',
-    },
-    {
-      'question': 'Java\'nın yaratıcısı kimdir?',
-      'options': [
-        'James Gosling',
-        'Guido van Rossum',
-        'Bjarne Stroustrup',
-        'Linus Torvalds'
-      ],
-      'answer': 'James Gosling',
-    },
-    {
-      'question': 'Java\'da hangi veri tipi yoktur?',
-      'options': ['int', 'char', 'float', 'string'],
-      'answer': 'string',
-    },
-    {
-      'question': 'Java\'da hangi anahtar kelime işlevseldir?',
-      'options': ['def', 'function', 'class', 'method'],
-      'answer': 'class',
-    },
-    {
-      'question': 'Java\'da hangi kütüphane standarttır?',
-      'options': ['java.util', 'java.io', 'java.net', 'java.awt'],
-      'answer': 'java.util',
-    },
-  ];
+  int _totalCorrectAnswers = 0;
+  int _totalIncorrectAnswers = 0;
+  final List<Map<String, dynamic>> _questions = [];
 
   @override
   void initState() {
     super.initState();
-    if (_questions.isNotEmpty) {
-      _correctAnswer = _questions[_currentQuestionIndex]['answer'];
-    }
-    _startCountdown();
+    _loadQuizData().then((_) {
+      if (_questions.isNotEmpty) {
+        _correctAnswer = _questions[_currentQuestionIndex]['answer'];
+        _startCountdown();
+      }
+    });
+  }
+
+  Future<void> _loadQuizData() async {
+    final rawData = await rootBundle.loadString('assets/quiz/python_quiz.csv');
+    final List<List<dynamic>> csvData =
+        const CsvToListConverter().convert(rawData);
+
+    setState(() {
+      for (var row in csvData.skip(1)) {
+        // İlk satırı atla
+        _questions.add({
+          'question': row[0],
+          'options': row.sublist(1, 5),
+          'answer': row[5],
+        });
+      }
+    });
   }
 
   void _startCountdown() {
@@ -79,14 +72,31 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
   }
 
   void _nextQuestion() {
+    if (_selectedOption == _correctAnswer) {
+      _totalCorrectAnswers++;
+    } else {
+      _totalIncorrectAnswers++;
+    }
+
     setState(() {
-      if (_questions.isNotEmpty) {
-        _currentQuestionIndex = (_currentQuestionIndex + 1) % _questions.length;
+      if (_currentQuestionIndex < _questions.length - 1) {
+        _currentQuestionIndex++;
         _selectedOption = null;
         _correctAnswer = _questions[_currentQuestionIndex]['answer'];
+        _resetTimer();
+      } else {
+        _timer.cancel();
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PythonResultPage(
+              totalCorrectAnswers: _totalCorrectAnswers,
+              totalIncorrectAnswers: _totalIncorrectAnswers,
+            ),
+          ),
+        );
       }
     });
-    _resetTimer();
   }
 
   void _handleOptionSelect(String? option) {
@@ -118,10 +128,11 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Java Quiz Test',
+          'Python Quiz Test',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
+            fontFamily: "Sora",
           ),
         ),
         backgroundColor: Colors.black,
@@ -237,50 +248,6 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
               ),
             ),
           ),
-          Positioned(
-            bottom: 30,
-            left: 0,
-            right: 0,
-            child: Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Puan',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                    Text(
-                      '$_score',
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF773BFF),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );
@@ -307,7 +274,7 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
           ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         ),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: Text(
             option,

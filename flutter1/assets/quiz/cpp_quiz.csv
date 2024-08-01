@@ -1,0 +1,11 @@
+question,options,answer
+C++'da virtual anahtar kelimesinin amacı nedir?,A) sanal(abstract) metodları tanımlamak, B) Bir metodun fonksiyon referansını belirtmek., C) Polimorfizm (çok biçimlilik) sağlamaktır., D) Metodun erişim denetimini sağlamak., E) sınıfın yeni üyelerini korumak,C
+C++'da bir işaretçi (pointer) nasıl tanımlanır?,A) int *ptr;, B) int ptr*;, C) ptr int;, D) int &ptr;, E) ptr int*;,A
+C++'da #define direktifi ile hangi işlem yapılır?,A) değişken tanımlar., B) Yeni bir sınıf oluşturur., C) fonksiyonun tanımını yapar, D) bir makro tanımlar, E) bellek tahsisi yapar,D
+C++'da aşağıdaki hangisi bir const üyenin değerini değiştiremez?,A) mutable üye, B) const fonksiyon, C) static üye, D) non-const fonksiyon, E) friend fonksiyon,B
+C++'da bir sınıfın yapıcı (constructor) fonksiyonu hangi adla tanımlanır?,A) init, B) sınıf adıyla aynı, C) create, D) setup, E) build,B
+C++'da static_cast operatörünün amacı nedir?,A) tür dönüştürmesi yapmak, B) dinamik bellek tahsisi yapmak, C) işaretci işlemleri gerçekleştirmek, D) veritabanı sorguları yazmak, E) dosya işlemleri yazmak,A
+C++'da bir sınıfın çoğaltılmasını önlemek için hangi anahtar kelime kullanılır?,A) procted, B) static, C) final, D) private, E) delete,E
+C++'da bir sınıfın destructor (yıkıcı) fonksiyonu nasıl tanımlanır?,A) ClassName();, B) ClassName::~ClassName();, C) ClassName::Destructor();, D) ClassName::Destructor() {}, E) ~ClassName{},E
+C++'da #pragma direktifi ne amaçla kullanılır?,A) kodun yorumlamlanmasını sağlar, B) Yeni bir değişken tanımlar., C) derleyiciye yönergeler verir, D) bellek tahsisi yapar, E) şablonlar oluşturur,C
+Aşağıdaki kod parçasında hangi operatör x değişkeninin değerini 5 arttırır?,A) ' x++ ', B) ' ++x ', C) ' x += 5 ', D) ' x = x + 5 ', E) ' x - - ',C

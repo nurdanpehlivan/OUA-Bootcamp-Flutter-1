@@ -1,0 +1,11 @@
+question,options,answer
+Pythonda bir liste oluşturmak için hangi sözdizimi kullanılır?,A) {}, B) (), C) [], D) <>, E) ::,C
+Pythonda hangi anahtar kelime bir fonksiyon tanımlamak için kullanılır?,A) function, B) def, C) lambda, D) func, E) define,B
+Pythonda bir sözlükteki tüm anahtarları almak için hangi yöntem kullanılır?,A) get_keys(), B) keys(), C) all_keys(), D) retrieve_keys(), E) fetch_keys(),B
+Pythonda bir modül nasıl içe aktarılır?,A) #import module_name, B) import module_name, C) include module_name, D) using module_name, E) load module_name,B
+Pythonda bir sınıf tanımlamak için hangi anahtar kelime kullanılır?,A) class, B) object, C) def, D) struct, E) module,A
+Pythonda bir dosya açmak için hangi fonksiyon kullanılır?,A) open(), B) file_open(), C) open_file(), D) file(), E) read_file(),A
+Pythonda bir döngü oluşturmak için hangi anahtar kelime kullanılır?,A) for, B) loop, C) iterate, D) while, E) foreach,A
+Pythonda bir değişkenin tipini öğrenmek için hangi fonksiyon kullanılır?,A) gettype(), B) typeof(), C) type(), D) var_type(), E) dtype(),C
+Pythonda hata ayıklama için hangi modül yaygın olarak kullanılır?,A) debug, B) trace, C) pdb, D) log, E) inspect,C
+Pythonda hangi anahtar kelime bir döngüden çıkmak için kullanılır?,A) exit, B) break, C) stop, D) end, E) quit,B

@@ -1,64 +1,55 @@
 import 'package:flutter/material.dart';
-import 'dart:async'; // Timer kullanmak için gerekli
+import 'dart:async';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:csv/csv.dart';
+import 'cpp_result_page.dart';
 
-class PythonQuizTest extends StatefulWidget {
+
+class CppQuizTest extends StatefulWidget {
+  const CppQuizTest({super.key});
+
   @override
-  _PythonQuizTestState createState() => _PythonQuizTestState();
+  _CppQuizTestState createState() => _CppQuizTestState();
 }
 
-class _PythonQuizTestState extends State<PythonQuizTest> {
-  int _secondsRemaining = 20; // Başlangıç süresi 20 saniye
+class _CppQuizTestState extends State<CppQuizTest> {
+  int _secondsRemaining = 20;
   late Timer _timer;
   int _currentQuestionIndex = 0;
-  String? _selectedOption; // Kullanıcının seçtiği şık
-  String? _correctAnswer; // Doğru yanıt
-  int _score = 0; // Kullanıcının toplam puanı
-  final List<Map<String, dynamic>> _questions = [
-    {
-      'question': 'Flutter hangi dilde yazılmıştır?',
-      'options': ['Kotlin', 'Swift', 'Java', 'Dart'],
-      'answer': 'Dart',
-    },
-    {
-      'question': 'Dart hangi firmaya aittir?',
-      'options': ['Google', 'Apple', 'Microsoft', 'Amazon'],
-      'answer': 'Google',
-    },
-    {
-      'question': 'Flutter ne zaman ilk kez piyasaya sürüldü?',
-      'options': ['2014', '2015', '2016', '2017'],
-      'answer': '2017',
-    },
-    {
-      'question': 'Flutter hangi tür uygulamalar geliştirmek için kullanılır?',
-      'options': [
-        'Web Uygulamaları',
-        'Mobil Uygulamalar',
-        'Masaüstü Uygulamalar',
-        'Hepsi'
-      ],
-      'answer': 'Hepsi',
-    },
-    {
-      'question': 'Hangi widget, Flutter’daki uygulama arayüzünü tanımlar?',
-      'options': ['Container', 'MaterialApp', 'Scaffold', 'Text'],
-      'answer': 'MaterialApp',
-    },
-    {
-      'question': 'Flutter, hangi şirket tarafından desteklenmektedir?',
-      'options': ['Google', 'Facebook', 'Microsoft', 'Apple'],
-      'answer': 'Google',
-    },
-    // Daha fazla soru ekleyebilirsiniz...
-  ];
+  String? _selectedOption;
+  String? _correctAnswer;
+  int _score = 0;
+  int _totalCorrectAnswers = 0;
+  int _totalIncorrectAnswers = 0;
+  final List<Map<String, dynamic>> _questions = [];
 
   @override
   void initState() {
     super.initState();
-    if (_questions.isNotEmpty) {
-      _correctAnswer = _questions[_currentQuestionIndex]['answer'];
-    }
-    _startCountdown();
+    _loadQuizData().then((_) {
+      if (_questions.isNotEmpty) {
+        _correctAnswer = _questions[_currentQuestionIndex]['answer'];
+        _startCountdown();
+      }
+    });
+  }
+
+  Future<void> _loadQuizData() async {
+    final rawData = await rootBundle.loadString('assets/quiz/cpp_quiz.csv');
+    final List<List<dynamic>> csvData =
+        const CsvToListConverter().convert(rawData);
+
+    setState(() {
+      // Başlık satırını atlayarak veri ekliyoruz
+      for (var i = 1; i < csvData.length; i++) {
+        final row = csvData[i];
+        _questions.add({
+          'question': row[0],
+          'options': row.sublist(1, 5),
+          'answer': row[5],
+        });
+      }
+    });
   }
 
   void _startCountdown() {
@@ -68,43 +59,58 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
           _secondsRemaining--;
         });
       } else {
-        _timer.cancel(); // Timer'ı durdur
-        _handleOptionSelect(null); // Zaman dolduğunda şık seçimini işleyin
+        _timer.cancel();
+        _handleOptionSelect(null);
       }
     });
   }
 
   void _resetTimer() {
-    _timer.cancel(); // Mevcut zamanlayıcıyı durdur
+    _timer.cancel();
     setState(() {
-      _secondsRemaining = 20; // Zamanlayıcı süresini 20 saniyeye sıfırla
+      _secondsRemaining = 20;
     });
-    _startCountdown(); // Zamanlayıcıyı yeniden başlat
+    _startCountdown();
   }
 
   void _nextQuestion() {
+    if (_selectedOption == _correctAnswer) {
+      _totalCorrectAnswers++;
+    } else {
+      _totalIncorrectAnswers++;
+    }
+
     setState(() {
-      if (_questions.isNotEmpty) {
-        _currentQuestionIndex = (_currentQuestionIndex + 1) % _questions.length;
-        _selectedOption = null; // Her yeni soruda seçimi sıfırla
+      if (_currentQuestionIndex < _questions.length - 1) {
+        _currentQuestionIndex++;
+        _selectedOption = null;
         _correctAnswer = _questions[_currentQuestionIndex]['answer'];
+        _resetTimer();
+      } else {
+        _timer.cancel();
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CppQuizResultPage(
+              totalCorrectAnswers: _totalCorrectAnswers,
+              totalIncorrectAnswers: _totalIncorrectAnswers,
+            ),
+          ),
+        );
       }
     });
-    _resetTimer(); // Zamanlayıcıyı sıfırla ve başlat
   }
 
   void _handleOptionSelect(String? option) {
     if (option == null) {
-      // Zaman dolduğunda yanıt verildi
       setState(() {
-        _selectedOption =
-            _correctAnswer; // Yanlış cevap veren seçenek olarak doğru cevabı göster
+        _selectedOption = _correctAnswer;
       });
     } else {
       setState(() {
         _selectedOption = option;
         if (option == _correctAnswer) {
-          _score++; // Doğru cevap verildiğinde puanı artır
+          _score++;
         }
       });
     }
@@ -112,7 +118,7 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
 
   @override
   void dispose() {
-    _timer.cancel(); // Sayfa kapatıldığında Timer'ı durdur
+    _timer.cancel();
     super.dispose();
   }
 
@@ -126,27 +132,26 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
         title: const Text(
           'Quiz Test',
           style: TextStyle(
-            color: Colors.white, // Başlık rengi beyaz
+            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.black, // Başlık çubuğu rengi
+        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
-          color: Colors.white, // Geri butonu rengi beyaz
+          color: Colors.white,
         ),
       ),
-      backgroundColor: Colors.black, // Arka plan rengi
+      backgroundColor: Colors.black,
       body: Stack(
         children: <Widget>[
           Positioned(
-            top: -50, // Üstten 50 piksel kaydır
-            left:
-                MediaQuery.of(context).size.width / 2 - 207, // Ortaya yerleştir
+            top: -50,
+            left: MediaQuery.of(context).size.width / 2 - 207,
             child: Container(
               width: 414,
               height: 242,
               decoration: const BoxDecoration(
-                color: Color(0xFF773BFF), // Kutunun rengi mor
+                color: Color(0xFF773BFF),
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(30),
                   bottomLeft: Radius.circular(30),
@@ -155,16 +160,16 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
             ),
           ),
           Positioned(
-            top: 20, // Üstten 20 piksel kaydır
-            right: 20, // Sağdan 20 piksel kaydır
+            top: 20,
+            right: 20,
             child: Container(
               width: 80,
               height: 80,
               decoration: BoxDecoration(
-                color: _getTimerColor(), // Zamanlayıcı rengi
+                color: _getTimerColor(),
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: _getTimerBorderColor(), // Kenarlık rengi
+                  color: _getTimerBorderColor(),
                   width: 5,
                 ),
               ),
@@ -172,7 +177,7 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
                 child: Text(
                   '${_secondsRemaining}s',
                   style: const TextStyle(
-                    fontSize: 14, // Küçültülmüş font boyutu
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
@@ -181,14 +186,13 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
             ),
           ),
           Positioned(
-            top: 120, // Üstten 120 piksel kaydır
-            left: MediaQuery.of(context).size.width / 2 -
-                179.5, // Ortaya yerleştir
+            top: 120,
+            left: MediaQuery.of(context).size.width / 2 - 179.5,
             child: Container(
               width: 359,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.white, // İçteki kutunun rengi beyaz
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -202,8 +206,7 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
                       color: Colors.black,
                     ),
                   ),
-                  const SizedBox(
-                      height: 20), // Soru numarası ile sorunun arasına boşluk
+                  const SizedBox(height: 20),
                   if (currentQuestion != null) ...[
                     Text(
                       '${currentQuestion['question']}',
@@ -214,31 +217,24 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(
-                        height:
-                            20), // Soru metni ile seçeneklerin arasına boşluk
+                    const SizedBox(height: 20),
                     Column(
                       children: [
                         ...currentQuestion['options']
                             .map((option) => _buildOptionButton(option))
                             .toList(),
-                        const SizedBox(
-                            height: 20), // Şıkların ve butonun arasına boşluk
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: _nextQuestion,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color(0xFF773BFF), // Buton rengi mor
-                            foregroundColor:
-                                Colors.white, // Buton yazısı rengi beyaz
-                            elevation: 5, // Buton gölgesi
+                            backgroundColor: const Color(0xFF773BFF),
+                            foregroundColor: Colors.white,
+                            elevation: 5,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  20), // Buton kenarlarını yuvarlat
+                              borderRadius: BorderRadius.circular(20),
                             ),
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 30,
-                                vertical: 15), // Butonun iç padding'i
+                                horizontal: 30, vertical: 15),
                           ),
                           child: const Text(
                             'Sonraki Soru',
@@ -255,9 +251,8 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
             ),
           ),
           Positioned(
-            bottom: 20, // Ekranın altına 20 piksel mesafe
-            left:
-                MediaQuery.of(context).size.width / 2 - 80, // Ortaya yerleştir
+            bottom: 20,
+            left: MediaQuery.of(context).size.width / 2 - 80,
             child: Container(
               width: 160,
               height: 60,
@@ -292,21 +287,21 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
 
   Color _getTimerColor() {
     if (_secondsRemaining <= 5) {
-      return Colors.red; // 5 saniye veya daha az sürede arka plan rengi kırmızı
+      return Colors.red;
     } else if (_secondsRemaining <= 10) {
-      return Colors.orange; // 10-5 saniye arası arka plan rengi turuncu
+      return Colors.orange;
     } else {
-      return Colors.green; // 20-11 saniye arası arka plan rengi yeşil
+      return Colors.green;
     }
   }
 
   Color _getTimerBorderColor() {
     if (_secondsRemaining <= 5) {
-      return Colors.red; // 5 saniye veya daha az sürede kenarlık rengi kırmızı
+      return Colors.red;
     } else if (_secondsRemaining <= 10) {
-      return Colors.orange; // 10-5 saniye arası kenarlık rengi turuncu
+      return Colors.orange;
     } else {
-      return Colors.green; // 20-11 saniye arası kenarlık rengi yeşil
+      return Colors.green;
     }
   }
 
@@ -316,32 +311,29 @@ class _PythonQuizTestState extends State<PythonQuizTest> {
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
-      child: Container(
+      child: SizedBox(
         width: 339,
         height: 71,
         child: OutlinedButton(
           onPressed: () => _handleOptionSelect(option),
           style: OutlinedButton.styleFrom(
             backgroundColor: isSelected
-                ? (isCorrect
-                    ? Colors.green
-                    : Colors.red) // Doğruysa yeşil, yanlışsa kırmızı
-                : Colors.white, // Varsayılan arka plan rengi
+                ? (isCorrect ? Colors.green : Colors.red)
+                : Colors.white,
             side: const BorderSide(
-              color: Color(0xFF773BFF), // Kenarlık rengi mor
+              color: Color(0xFF773BFF),
               width: 2,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.circular(10), // Buton kenarlarını yuvarlat
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
           child: Text(
             option,
             style: const TextStyle(
-              fontSize: 16, // Tüm şıklar için aynı font boyutu
+              fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.black, // Yazı rengi siyah
+              color: Colors.black,
             ),
           ),
         ),

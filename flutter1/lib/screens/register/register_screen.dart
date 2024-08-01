@@ -35,6 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.textColor,
                         fontWeight: FontWeight.bold,
+                        fontFamily: "Sora",
                       ),
                 ),
                 const SizedBox(height: AppDimensions.spacing),
@@ -85,7 +86,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ).copyWith(
         prefixIcon: const Icon(Icons.person, color: AppColors.iconColor),
       ),
-      style: const TextStyle(color: AppColors.textColor),
+      style: const TextStyle(
+        color: AppColors.textColor,
+        fontFamily: "Sora",
+      ),
       validator: (value) =>
           value?.isEmpty ?? true ? AppStrings.fullNameRequired : null,
       onSaved: (value) => _fullName = value!,
@@ -101,7 +105,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         prefixIcon: const Icon(Icons.email, color: AppColors.iconColor),
       ),
       keyboardType: TextInputType.emailAddress,
-      style: const TextStyle(color: AppColors.textColor),
+      style: const TextStyle(
+        color: AppColors.textColor,
+      ),
       validator: (value) =>
           value?.isEmpty ?? true ? AppStrings.emailRequired : null,
       onSaved: (value) => _email = value!,
@@ -117,7 +123,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
         prefixIcon: const Icon(Icons.lock, color: AppColors.iconColor),
       ),
       obscureText: true,
-      style: const TextStyle(color: AppColors.textColor),
+      style: const TextStyle(
+        color: AppColors.textColor,
+        fontFamily: "Sora",
+      ),
       validator: (value) =>
           value?.isEmpty ?? true ? AppStrings.passwordRequired : null,
       onSaved: (value) => _password = value!,
@@ -134,7 +143,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
             style: AppButtonStyles.primaryButton,
             child: const Text(
               AppStrings.registerButton,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: "Sora",
+              ),
             ),
           );
   }
@@ -144,7 +156,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       onPressed: () => Navigator.pushNamed(context, '/login'),
       child: const Text(
         AppStrings.loginPrompt,
-        style: TextStyle(color: AppColors.textColor),
+        style: TextStyle(
+          color: AppColors.textColor,
+          fontFamily: "Sora",
+        ),
       ),
     );
   }

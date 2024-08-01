@@ -1,49 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/quiz/java_quiz_test.dart'; // Yeni sayfanın import edilmesi
 
-class JavaQuizGiris extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Java Quiz'),
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(color: Colors.white),
-      ),
-      backgroundColor: Colors.black,
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => JavaQuizTest()), // Java quiz testine yönlendirme
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF773BFF),
-            foregroundColor: Colors.white,
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-          ),
-          child: const Text(
-            'Başla',
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
-      ),
-    );
-  }
-}
+import 'flutterquiz_test.dart'; // Yeni sayfanın import edilmesi
 
 class FlutterPage extends StatelessWidget {
+  const FlutterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Flutter Sayfası',
           style: TextStyle(
             color: Colors.white, // Başlık rengi beyaz
@@ -51,7 +17,7 @@ class FlutterPage extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.black, // Başlık çubuğu rengi
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white, // Geri butonu rengi beyaz
         ),
       ),
@@ -78,7 +44,7 @@ class FlutterPage extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
                     blurRadius: 10,
-                    offset: Offset(0, 5),
+                    offset: const Offset(0, 5),
                   ),
                 ],
               ),
@@ -89,7 +55,7 @@ class FlutterPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Butona tıklama işlemi gerçekleştirilir ve yeni ekran açılır
@@ -97,22 +63,22 @@ class FlutterPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          JavaQuizTest()), // FlutterQuizTest ekranına yönlendirme
+                          const FlutterQuizTest()), // FlutterQuizTest ekranına yönlendirme
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF773BFF), // Buton rengi mor
+                backgroundColor: const Color(0xFF773BFF), // Buton rengi mor
                 foregroundColor: Colors.white, // Buton yazısı rengi beyaz
                 elevation: 5, // Buton gölgesi
                 shape: RoundedRectangleBorder(
                   borderRadius:
                       BorderRadius.circular(20), // Buton kenarlarını yuvarlat
                 ),
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                     horizontal: 30, vertical: 15), // Butonun iç padding'i
               ),
-              child: Text(
-                'Butona Tıkla',
+              child: const Text(
+                'Test\'e Başla',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -123,10 +89,4 @@ class FlutterPage extends StatelessWidget {
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: FlutterPage(),
-  ));
 }

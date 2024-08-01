@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +20,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   final TextEditingController _displayNameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _birthDateController = TextEditingController();
-  final TextEditingController _bioController =
-      TextEditingController(); // Bio controller ekledik
   XFile? _image;
   final ImagePicker _picker = ImagePicker();
   String? _gender;
@@ -37,8 +34,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           ''; // Profilde kayıtlı olan telefon numarası varsa buraya ekleyebilirsiniz
       _birthDateController.text =
           ''; // Profilde kayıtlı olan doğum tarihi varsa buraya ekleyebilirsiniz
-      _bioController.text =
-          ''; // Profilde kayıtlı olan bio varsa buraya ekleyebilirsiniz
     }
   }
 
@@ -69,11 +64,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           displayName: _displayNameController.text,
           photoURL: photoURL,
         );
-
-        // Bio bilgilerini Firestore'da güncelleyin
-        await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
-          'bio': _bioController.text,
-        }, SetOptions(merge: true));
 
         // Diğer bilgileri Realtime Database'de güncelleyin
         final DatabaseReference dbRef =
@@ -134,38 +124,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           : null,
                     ),
                   ),
-                ),
-                const SizedBox(height: AppDimensions.smallSpacing),
-                // Bio
-                TextFormField(
-                  controller: _bioController,
-                  decoration: InputDecoration(
-                    labelText: 'Bio',
-                    labelStyle: const TextStyle(
-                      fontSize: 15,
-                      color: Colors.blueGrey,
-                      fontFamily: 'Sora',
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(AppDimensions.borderRadius),
-                      borderSide: const BorderSide(
-                          color: Colors.white), // Çizgi rengi beyaz
-                    ),
-                  ),
-                  maxLines: 3,
                 ),
                 const SizedBox(height: AppDimensions.smallSpacing),
                 // Cinsiyet seçimi
