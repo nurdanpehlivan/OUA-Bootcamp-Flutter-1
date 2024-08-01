@@ -3,7 +3,10 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter1/screens/constants.dart';
-import 'package:flutter1/screens/quiz/flutterquiz.dart';
+import 'package:flutter1/screens/quiz/flutter_quiz_test.dart';
+import 'package:flutter1/screens/quiz/flutterquiztest.dart';
+import 'package:flutter1/screens/quiz/pythonquiz_giris.dart'; // Python sayfasının import edilmesi
+import 'package:flutter1/screens/quiz/javaquiz_giris.dart'; // Java sayfasının import edilmesi
 import '../articles/articles_detail_screen.dart';
 import '../articles/articles_screen.dart';
 
@@ -214,13 +217,27 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
       String name, String logoPath, BuildContext context) {
     return GestureDetector(
       onTap: () {
+        print('$name yazısına tıklandı'); // Tıklama olayını konsolda gör
         if (name == 'Flutter') {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => FlutterPage()),
           );
+        } else if (name == 'Python') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    PythonQuizGiris()), // Python sayfasına yönlendirme
+          );
+        } else if (name == 'Java') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    JavaQuizGiris()), // Java sayfasına yönlendirme
+          );
         }
-        // Diğer diller için başka sayfalara yönlendirme ekleyebilirsin
       },
       child: Container(
         margin: const EdgeInsets.symmetric(

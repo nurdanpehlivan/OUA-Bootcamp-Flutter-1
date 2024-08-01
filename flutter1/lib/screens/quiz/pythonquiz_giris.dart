@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/quiz/flutter_quiz_test.dart'; // Yeni sayfanın import edilmesi
+// ignore: unused_import
+import 'package:flutter1/screens/quiz/python_quiz_test.dart'; // Yeni Python quiz testinin import edilmesi
 
-class FlutterPage extends StatelessWidget {
+class PythonQuizGiris extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Flutter Sayfası',
+          'Python Sayfası',
           style: TextStyle(
             color: Colors.white, // Başlık rengi beyaz
             fontWeight: FontWeight.bold,
@@ -27,8 +28,7 @@ class FlutterPage extends StatelessWidget {
               width: 300,
               height: 300,
               decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.circular(20), // Kenarları 20 px yuvarlat
+                borderRadius: BorderRadius.circular(20), // Kenarları yuvarlat
                 gradient: LinearGradient(
                   colors: [
                     Colors.blue[300]!,
@@ -47,8 +47,8 @@ class FlutterPage extends StatelessWidget {
               ),
               child: Center(
                 child: Image.asset(
-                  'assets/Flutter.png', // Resim yolu
-                  fit: BoxFit.cover, // Resmin kapsama şeklini ayarlar
+                  'assets/Python.png', // Resim yolu
+                  fit: BoxFit.cover, // Resmin kapsama şekli
                 ),
               ),
             ),
@@ -60,7 +60,7 @@ class FlutterPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          FlutterQuizTest()), // FlutterQuizTest ekranına yönlendirme
+                          PythonQuizGiris()), // PythonQuizTest ekranına yönlendirme
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -86,10 +86,4 @@ class FlutterPage extends StatelessWidget {
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: FlutterPage(),
-  ));
 }

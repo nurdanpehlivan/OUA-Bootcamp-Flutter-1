@@ -1,5 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/quiz/flutter_quiz_test.dart'; // Yeni sayfanın import edilmesi
+import 'package:flutter1/screens/quiz/java_quiz_test.dart'; // Yeni sayfanın import edilmesi
+
+class JavaQuizGiris extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Java Quiz'),
+        backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
+      backgroundColor: Colors.black,
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => JavaQuizTest()), // Java quiz testine yönlendirme
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color(0xFF773BFF),
+            foregroundColor: Colors.white,
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          ),
+          child: const Text(
+            'Başla',
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class FlutterPage extends StatelessWidget {
   @override
@@ -60,7 +97,7 @@ class FlutterPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          FlutterQuizTest()), // FlutterQuizTest ekranına yönlendirme
+                          JavaQuizTest()), // FlutterQuizTest ekranına yönlendirme
                 );
               },
               style: ElevatedButton.styleFrom(
