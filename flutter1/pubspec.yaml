@@ -85,9 +85,16 @@ flutter:
     - assets/flutter_logo.png
     - assets/python_logo.png
     - assets/Flutter.png
+    - assets/Java.png
+    - assets/csharp.png
+    - assets/kotlin.png
+    - assets/cpp.png
     - assets/quiz/flutter_quiz_questions.xlsx
 
     - assets/articles/articles.csv
+    - assets/sss.csv
+    - assets/help.csv
+    - assets/profilfoto.png
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

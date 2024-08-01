@@ -3,9 +3,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter1/screens/constants.dart';
-import 'package:flutter1/screens/quiz/flutter_quiz_test.dart';
-import 'package:flutter1/screens/quiz/flutterquiztest.dart';
-import 'package:flutter1/screens/quiz/pythonquiz_giris.dart'; // Python sayfasının import edilmesi
+import '../quiz/pythonquiz_giris.dart'; // Python sayfasının import edilmesi
 import 'package:flutter1/screens/quiz/javaquiz_giris.dart'; // Java sayfasının import edilmesi
 import '../articles/articles_detail_screen.dart';
 import '../articles/articles_screen.dart';
