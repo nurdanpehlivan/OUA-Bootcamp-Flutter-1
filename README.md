@@ -283,11 +283,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - **Daily Scrum**: Daily Scrum toplantıları hem Discord hem de zamansal sebeplerle WhatsApp üzerinden yapıldı. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
 
 <details>
-    <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary>
-    
+    <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary>    
     <img src="bootcamp/sprintOne/screenshots/317.png" style="max-width: 100%; height: auto;">
-  
-</details>
+  </details>
 
 - **Sprint Board Update**: Sprint board screenshotları:
 
