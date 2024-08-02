@@ -40,6 +40,7 @@
       <td>
         <a href="https://github.com/nurdanpehlivan" target="_blank"><img src="bootcamp/general/social/github.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/nurdanpehlivan/" target="_blank"><img src="bootcamp/general/social/linkedin.png" width="20" height="20" /></a>
+        <a href="https://www.instagram.com/nurdanpehliivan/" target="_blank"><img src="bootcamp/general/social/instagram.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
