@@ -284,7 +284,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 <details>
     <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary>
     
-    <img src="bootcamp/sprintOne/screenshots/Sprint3-3.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/Sprint316.png" style="max-width: 100%; height: auto;">
   
 
 </details>
@@ -292,7 +292,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - 
 <details>
     
-    <img src="bootcamp/sprintOne/screenshots/Sprint3-1.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/Sprint315.png" style="max-width: 100%; height: auto;">
   
   
 
