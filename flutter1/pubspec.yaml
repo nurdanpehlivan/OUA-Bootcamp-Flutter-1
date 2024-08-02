@@ -78,18 +78,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-
     - assets/logo/
-
     - assets/quiz_logo/
-
     - assets/articles/
-
     - assets/sss.csv
-
-    - assets/help.csv
-    
+    - assets/help.csv 
     - assets/profilfoto.png
+    - assets/quiz/
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

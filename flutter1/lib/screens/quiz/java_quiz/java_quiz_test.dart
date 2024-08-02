@@ -5,6 +5,8 @@ import 'package:csv/csv.dart';
 import 'quiz_result_page.dart'; // Sonuç ekranı için import
 
 class JavaQuizTest extends StatefulWidget {
+  const JavaQuizTest({super.key});
+
   @override
   _JavaQuizTestState createState() => _JavaQuizTestState();
 }
@@ -15,7 +17,6 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
   int _currentQuestionIndex = 0;
   String? _selectedOption;
   String? _correctAnswer;
-  int _score = 0;
   int _totalCorrectAnswers = 0;
   int _totalIncorrectAnswers = 0;
   final List<Map<String, dynamic>> _questions = [];
@@ -106,9 +107,6 @@ class _JavaQuizTestState extends State<JavaQuizTest> {
     } else {
       setState(() {
         _selectedOption = option;
-        if (option == _correctAnswer) {
-          _score++;
-        }
       });
     }
   }

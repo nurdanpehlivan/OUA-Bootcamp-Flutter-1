@@ -17,7 +17,6 @@ class _FlutterQuizTestState extends State<FlutterQuizTest> {
   int _currentQuestionIndex = 0;
   String? _selectedOption;
   String? _correctAnswer;
-  int _score = 0;
   int _totalCorrectAnswers = 0;
   int _totalIncorrectAnswers = 0;
   final List<Map<String, dynamic>> _questions = [];
@@ -108,9 +107,6 @@ class _FlutterQuizTestState extends State<FlutterQuizTest> {
     } else {
       setState(() {
         _selectedOption = option;
-        if (option == _correctAnswer) {
-          _score++;
-        }
       });
     }
   }

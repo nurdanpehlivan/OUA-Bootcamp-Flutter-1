@@ -50,7 +50,7 @@ class FlutterPage extends StatelessWidget {
               ),
               child: Center(
                 child: Image.asset(
-                  'assets/Flutter.png', // Resim yolu
+                  'assets/quiz_logo/flutter.png', // Resim yolu
                   fit: BoxFit.cover, // Resmin kapsama şeklini ayarlar
                 ),
               ),
