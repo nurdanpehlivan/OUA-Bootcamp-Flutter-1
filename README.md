@@ -280,9 +280,9 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 16 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 15 ile başlaması, ikinci sprintin 14 ile devam etmesi gerektiğine karar verildi, üçüncüsü için de 14 uygun görüldü.
 
 - **Daily Scrum**: Daily Scrum toplantıları hem Discord hem de zamansal sebeplerle WhatsApp üzerinden yapıldı. Daily Scrum toplantısı örneği Readme dosyasında tarafımızdan paylaşılmıştır:
-- 
+
 <details>
-    <summary><h3>Sprint 2 de Geliştirilen Ekranlar:</h3></summary>
+    <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary>
     
     <img src="bootcamp/sprintOne/screenshots/Sprint3-3.png" style="max-width: 100%; height: auto;">
   
@@ -315,21 +315,23 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
  
 <details>
     <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary> 
-    <img src="bootcamp/sprintOne/screenshots/60.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/61.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/62.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/63.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/64.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/301.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/302.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/303.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/304.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/305.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/306.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/307.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/308.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/309.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/310.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/311.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/312.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/313.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/314.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/315.png" style="max-width: 100%; height: auto;">
 
 </details>
-
-<details>
-    <summary><h3>Sprint 2 de Geliştirilen Ekranlar:</h3></summary>
-    <img src="bootcamp/sprintOne/screenshots/70.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/71.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/72.png" style="max-width: 100%; height: auto;">
-</details>
-
 
   </body>
   </html>
