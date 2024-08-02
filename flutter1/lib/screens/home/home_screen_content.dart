@@ -3,12 +3,11 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter1/screens/constants.dart';
-import 'package:flutter1/screens/quiz/flutter_quiz_test.dart';
-import 'package:flutter1/screens/quiz/flutterquiztest.dart';
-import 'package:flutter1/screens/quiz/pythonquiz_giris.dart'; // Python sayfasının import edilmesi
-import 'package:flutter1/screens/quiz/javaquiz_giris.dart'; // Java sayfasının import edilmesi
+import 'package:flutter1/screens/quiz/python_quiz/pythonquiz_giris.dart'; // Python sayfasının import edilmesi
+import 'package:flutter1/screens/quiz/java_quiz/javaquiz_giris.dart'; // Java sayfasının import edilmesi
 import '../articles/articles_detail_screen.dart';
 import '../articles/articles_screen.dart';
+import '../quiz/flutter_quiz/flutterquiz_giris.dart';
 
 class HomeScreenContent extends StatefulWidget {
   final User? user;
@@ -59,7 +58,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
               style: const TextStyle(
                 fontSize: 24,
                 color: AppColors.textColor,
-                fontFamily: "Montserrat",
+                fontFamily: "Sora",
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -206,9 +205,9 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
           ),
         ),
         const SizedBox(height: AppDimensions.smallSpacing),
-        _buildLanguageCard('Flutter', 'assets/flutter_logo.png', context),
-        _buildLanguageCard('Python', 'assets/python_logo.png', context),
-        _buildLanguageCard('Java', 'assets/java_logo.jpg', context),
+        _buildLanguageCard('Flutter', 'assets/quiz_logo/flutter.png', context),
+        _buildLanguageCard('Python', 'assets/quiz_logo/python.png', context),
+        _buildLanguageCard('Java', 'assets/quiz_logo/java.png', context),
       ],
     );
   }
@@ -217,25 +216,26 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
       String name, String logoPath, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('$name yazısına tıklandı'); // Tıklama olayını konsolda gör
         if (name == 'Flutter') {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlutterPage()),
+            MaterialPageRoute(
+              builder: (context) => const FlutterPage(),
+            ),
           );
         } else if (name == 'Python') {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) =>
-                    PythonQuizGiris()), // Python sayfasına yönlendirme
+              builder: (context) => const PythonQuizGiris(),
+            ), // Python sayfasına yönlendirme
           );
         } else if (name == 'Java') {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) =>
-                    JavaQuizGiris()), // Java sayfasına yönlendirme
+              builder: (context) => const JavaQuizGiris(),
+            ), // Java sayfasına yönlendirme
           );
         }
       },

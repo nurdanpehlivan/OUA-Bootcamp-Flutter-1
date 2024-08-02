@@ -1,0 +1,124 @@
+,,FLUTTER,,
+,,,,
+Flutter hangi dil ile yazılmıştır?,,,,
+A) Java,B) Kotlin,C) Dart,D) Swift,E) Python
+Flutter'da bir widget nedir?,,,,
+A) Bir veri tabanı bağlantısı,B) Bir API çağrısı,C) Bir UI bileşeni,D) Bir dosya formatı,E) Bir işletim sistemi
+Flutter'da StatelessWidget ile StatefulWidget arasındaki temel fark nedir?,,,,
+A) StatelessWidget daha hızlıdır,B) StatefulWidget'in durumu vardır ,C) StatelessWidget daha çok bellek kullanır,D) StatefulWidget daha az CPU kullanır,E) StatelessWidget animasyonlar için kullanılır
+Flutter'da StatelessWidget ile StatefulWidget arasındaki temel fark nedir?,,,,
+A) StatelessWidget daha hızlıdır,B) StatefulWidget'in durumu vardır ,C) StatelessWidget daha çok bellek kullanır,D) StatefulWidget daha az CPU kullanır,E) StatelessWidget animasyonlar için kullanılır
+Flutter'da sayfalar arasında geçiş yapmak için hangi yöntem kullanılır?,,,,
+A) Navigator,B) Router,C) PageController,D) TransitionManager,E) SceneManager
+Flutter'da yerel depolama için hangi paket yaygın olarak kullanılır?,,,,
+A) sqflite,B) shared_preferences,C) path_provider,D) hive,E) firebase_database
+Flutter'da bir widget'ı ortalamak için hangi widget kullanılır?,,,,
+A) Column,B) Row,C) Center,D) Align,E) Padding
+Flutter'da asenkron işlemleri yönetmek için hangi sınıf kullanılır?,,,,
+A) Future ,B) Stream,C) AsyncTask,D) Coroutine,E) Thread
+Flutter'da animasyonlar için hangi paket önerilir?,,,,
+A) flutter_sequence_animation,B) flare_flutter,C) lottie,D) animations,E) rive
+Flutter'da widget'lar nasıl yeniden çizilir?,,,,
+A) setState(),B) rebuild(),C) refresh(),D) updateUI(),E) redraw()
+Flutter ile platform-spesifik kod yazmak için hangi yapı kullanılır?,,,,
+A) PlatformChannel,B) MethodChannel ,C) EventChannel,D) MessageChannel,E) PlatformBridge
+,,,,
+,,,,
+,,PYTHON,,
+,,,,
+,,,,
+,,,,
+Python’da bir liste oluşturmak için hangi sözdizimi kullanılır?,,,,
+A) {},B) (),C) [],D) <>,E) ::
+Python’da hangi anahtar kelime bir fonksiyon tanımlamak için kullanılır?,,,,
+A) function,B) def,C) lambda,D) func,E) define
+Python’da bir sözlükteki tüm anahtarları almak için hangi yöntem kullanılır?,,,,
+A) get_keys(),B) keys() ,C) all_keys(),D) retrieve_keys(),E) fetch_keys()
+Python’da bir modül nasıl içe aktarılır?,,,,
+A) #import module_name,B) import module_name,C) include module_name,D) using module_name,E) load module_name
+Python’da bir sınıf tanımlamak için hangi anahtar kelime kullanılır?,,,,
+A) class ,B) object,C) def,D) struct,E) module
+Python’da bir dosya açmak için hangi fonksiyon kullanılır?,,,,
+A) open() ,B) file_open(),C) open_file(),D) file(),E) read_file()
+Python’da bir döngü oluşturmak için hangi anahtar kelime kullanılır?,,,,
+A) for ,B) loop,C) iterate,D) while,E) foreach
+Python’da bir değişkenin tipini öğrenmek için hangi fonksiyon kullanılır?,,,,
+A) gettype(),B) typeof(),C) type(),D) var_type(),E) dtype()
+Python’da hata ayıklama için hangi modül yaygın olarak kullanılır?,,,,
+A) debug,B) trace,C) pdb,D) log,E) inspect
+Python’da hangi anahtar kelime bir döngüden çıkmak için kullanılır?,,,,
+A) exit,B) break,C) stop,D) end,E) quit
+,,,,
+,,,,
+,,JAVA,,
+,,,,
+,,,,
+,,,,
+Java'da bir sınıf tanımlamak için hangi anahtar kelime kullanılır?,,,,
+A) function,B) class ,C) def,D) object,E) struct
+Java'da bir değişkenin veri tipini belirtmek için hangi anahtar kelime kullanılır?,,,,
+A) type,B) datatype,C) var,D) data,E) int 
+Java'da bir fonksiyonun dönüş tipini belirtmek için hangi anahtar kelime kullanılır?,,,,
+A) return,B) yield,C) output,D) result,E) back
+Java'da bir sınıfın başka bir sınıftan türemesi için hangi anahtar kelime kullanılır?,,,,
+A) inherits,B) implements,C) extends ,D) derives,E) follows
+Java'da çoklu kalıtımı desteklemek için hangi yapı kullanılır?,,,,
+A) class,B) interface ,C) abstract,D) implements,E) inheritance
+Java'da bir metodu diğer metodlar tarafından çağrılabilir yapmak için hangi anahtar kelime kullanılır?,,,,
+A) private,B) public,C) protected,D) static,E) final
+Java'da HashMap'te bir anahtara karşılık gelen değeri nasıl alırsınız?,,,,
+A) map.get(key);,B)  map.find(key);,C) map.retrieve(key);,D) map.lookup(key);, E) map.fetch(key);
+Java'da hangi anahtar kelime bir sınıfın başka bir sınıftan miras almasını sağlar?,,,,
+A) super,B) inherits,C) implements,D) extends,E) extendsClass
+Java'da bir istisna (exception) fırlatmak için hangi anahtar kelime kullanılır?,,,,
+A) raise,B) throws,C) throw,D) catch,E) error
+Java'da try-catch bloğunun amacı nedir?,,,,
+A) veritabanı işlemlerini yönetmek,B) performansı arttırmak,C) bellek kullanımını azaltmak,D) kodun hızını arttırmak,E) hata yönetimi yapmak
+,,C++,,
+,,,,
+,,,,
+,,,,
+C++'da virtual anahtar kelimesinin amacı nedir?,,,,
+A) sanal(abstract) metodları tanımlamak,B) Bir metodun fonksiyon referansını belirtmek.,C) Polimorfizm (çok biçimlilik) sağlamaktır.,D) Metodun erişim denetimini sağlamak.,E) sınıfın yeni üyelerini korumak
+C++'da bir işaretçi (pointer) nasıl tanımlanır?,,,,
+A) int *ptr;,B) int ptr*;,C) ptr int;,D) int &ptr;,E) ptr int*;
+C++'da #define direktifi ile hangi işlem yapılır?,,,,
+A)  değişken tanımlar.,B) Yeni bir sınıf oluşturur.,C) fonksiyonun tanımını yapar,D) bir makro tanımlar,E) bellek tahsisi yapar
+C++'da aşağıdaki hangisi bir const üyenin değerini değiştiremez?,,,,
+A) mutable üye,B) const fonksiyon,C) static üye,D) non-const fonksiyon,E) friend fonksiyon 
+C++'da bir sınıfın yapıcı (constructor) fonksiyonu hangi adla tanımlanır?,,,,
+A) init,B) sınıf adıyla aynı,C) create,D) setup,E) build
+C++'da static_cast operatörünün amacı nedir?,,,,
+A) tür dönüştürmesi yapmak,B) dinamik bellek tahsisi yapmak,C) işaretci işlemleri gerçekleştirmek,D) veritabanı sorguları yazmak,E) dosya işlemleri yazmak
+C++'da bir sınıfın çoğaltılmasını önlemek için hangi anahtar kelime kullanılır?,,,,
+A) procted,B) static,C) final,D) private,E) delete
+  C++'da bir sınıfın destructor (yıkıcı) fonksiyonu nasıl tanımlanır?,,,,
+A) ClassName();,B) ClassName::~ClassName();,C) ClassName::Destructor();,D) ClassName::Destructor() {},E) ~ClassName{}
+C++'da #pragma direktifi ne amaçla kullanılır?,,,,
+A) kodun yorumlamlanmasını sağlar,B) Yeni bir değişken tanımlar.,C) derleyiciye yönergeler verir,D) bellek tahsisi yapar,E) şablonlar oluşturur
+Aşağıdaki kod parçasında hangi operatör x değişkeninin değerini 5 arttırır?,,,,
+A) ' x++ ',B) ' ++x ',C) ' x + = 5 ',D) ' x = x + 5 ',E) ' x - - '
+,,KOTLİN,,
+,,,,
+,,,,
+,,,,
+Kotlin'de lateinit ne zaman kullanılır?,,,,
+A) Sınıf değişkenleri için,B) Başlangıçta değer atanmayacaksa,C) Fonksiyon tanımları için,D) Yalnızca val için,E) const değişkenler için
+Kotlin'de with fonksiyonu ne amaçla kullanılır?,,,,
+A) null değerlerle çalışır,B) Fonksiyonları inline yapar,C) Sınıf oluşturur,D) Bir nesne üzerinde birden fazla işlem yapar , E) Bellek yönetimi sağlar
+Kotlin'de inline anahtar kelimesi hangi işlevi görür?,,,,
+A) Fonksiyonu static yapar,B) Fonksiyonu abstract yapar,C) Fonksiyonu çağırıldığı yerde genişletir,D) Fonksiyonu private yapar,E) Fonksiyonu public yapar
+Kotlin'de object anahtar kelimesi ile oluşturulan yapı nedir?,,,,
+A) Interface,B) Singleton,C) data class,D) abstract class,E) enum class
+Kotlin'de for döngüsü ne tür yapılar üzerinde çalışabilir?,,,,
+Koleksiyonlar ve diziler ,B) sadece diziler,C) sadece sayılar,D) yalnızca fonksiyonlar,E) yalnızca nesneler
+Kotlin'de invoke operatörü ne işe yarar?,,,,
+A) Bir sınıfın örneğini işlev gibi çağırır,B) Bir fonksiyonu inline yapar,C) Bir sınıfı abstract yapar,D) null kontrolü yapar,E) Bir nesneye değer atar
+Kotlin'de apply fonksiyonu hangi işlevi görür?,,,,
+A) Bir işlevi inline yapar,B) Bir sınıfı abstract yapar,C) Bir nesne üzerinde yapılandırma işlemleri yapar,D) Bir değişkeni lateinit yapar,E) Bir nesnenin değerini null yapar
+Kotlin'de sealed sınıflar ne sağlar?,,,,
+A) Sınıfın abstract olmasını sağlar,B) Sınıfın yalnızca final olmasını sağlar,C) Sınıfın yalnızca public olmasını sağlar,D) Sınıfın data olmasını sağlar,E) Sınıfın belirli alt sınıflarla genişletilmesini sağlar
+Kotlin'de null güvenliğini sağlamak için hangi operatör kullanılır?,,,,
+A) '! ! ',B) ' ? ',C) ' ? : ',D) ' ! ! ? ',E) ' * '
+lazy ile tanımlanan değişkenin özelliği nedir?,,,,
+A) Her erişimde yeniden hesaplanır.,B) sadece null olabilir,C) yalnızca okunabilir,D) sadece bir kez hesaplanır,E) asenkron olarak hesaplanır

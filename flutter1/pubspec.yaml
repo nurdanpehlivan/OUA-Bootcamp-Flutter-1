@@ -77,17 +77,19 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/java_logo.jpg
-    - assets/logo/CodeWiseLogo.jpg
-    - assets/Avatar.png
-    - assets/Avatar1.png
-    - assets/Avatar2.png
-    - assets/flutter_logo.png
-    - assets/python_logo.png
-    - assets/Flutter.png
-    - assets/quiz/flutter_quiz_questions.xlsx
+    - assets/
 
-    - assets/articles/articles.csv
+    - assets/logo/
+
+    - assets/quiz_logo/
+
+    - assets/articles/
+
+    - assets/sss.csv
+
+    - assets/help.csv
+    
+    - assets/profilfoto.png
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,0 +1,11 @@
+question,options,answer
+Kotlinde lateinit ne zaman kullanılır?,A) Sınıf değişkenleri için, B) Başlangıçta değer atanmayacaksa, C) Fonksiyon tanımları için, D) Yalnızca val için, E) const değişkenler için,B
+Kotlinde with fonksiyonu ne amaçla kullanılır?,A) null değerlerle çalışır, B) Fonksiyonları inline yapar, C) Sınıf oluşturur, D) Bir nesne üzerinde birden fazla işlem yapar, E) Bellek yönetimi sağlar,D
+Kotlinde inline anahtar kelimesi hangi işlevi görür?,A) Fonksiyonu static yapar, B) Fonksiyonu abstract yapar, C) Fonksiyonu çağırıldığı yerde genişletir, D) Fonksiyonu private yapar, E) Fonksiyonu public yapar,C
+Kotlinde object anahtar kelimesi ile oluşturulan yapı nedir?,A) Interface, B) Singleton, C) data class, D) abstract class, E) enum class,B
+Kotlinde for döngüsü ne tür yapılar üzerinde çalışabilir?,A) Koleksiyonlar ve diziler, B) sadece diziler, C) sadece sayılar, D) yalnızca fonksiyonlar, E) yalnızca nesneler,A
+Kotlinde invoke operatörü ne işe yarar?,A) Bir sınıfın örneğini işlev gibi çağırır, B) Bir fonksiyonu inline yapar, C) Bir sınıfı abstract yapar, D) null kontrolü yapar, E) Bir nesneye değer atar,A
+Kotlinde apply fonksiyonu hangi işlevi görür?,A) Bir işlevi inline yapar, B) Bir sınıfı abstract yapar, C) Bir nesne üzerinde yapılandırma işlemleri yapar, D) Bir değişkeni lateinit yapar, E) Bir nesnenin değerini null yapar,C
+Kotlinde sealed sınıflar ne sağlar?,A) Sınıfın abstract olmasını sağlar, B) Sınıfın yalnızca final olmasını sağlar, C) Sınıfın yalnızca public olmasını sağlar, D) Sınıfın data olmasını sağlar, E) Sınıfın belirli alt sınıflarla genişletilmesini sağlar,E
+Kotlinde null güvenliğini sağlamak için hangi operatör kullanılır?,A) ! ! , B)  ? , C)  ? : , D)  ! ! ? , E)  * ,B
+lazy ile tanımlanan değişkenin özelliği nedir?,A) Her erişimde yeniden hesaplanır., B) sadece null olabilir, C) yalnızca okunabilir, D) sadece bir kez hesaplanır, E) asenkron olarak hesaplanır,D

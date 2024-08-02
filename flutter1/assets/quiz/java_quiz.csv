@@ -1,0 +1,11 @@
+question,options,answer
+Javada bir sınıf tanımlamak için hangi anahtar kelime kullanılır?,A) function, B) class, C) def, D) object, E) struct,B
+Javada bir değişkenin veri tipini belirtmek için hangi anahtar kelime kullanılır?,A) type, B) datatype, C) var, D) data, E) int,E
+Javada bir fonksiyonun dönüş tipini belirtmek için hangi anahtar kelime kullanılır?,A) return, B) yield, C) output, D) result, E) back,A
+Javada bir sınıfın başka bir sınıftan türemesi için hangi anahtar kelime kullanılır?,A) inherits, B) implements, C) extends, D) derives, E) follows,C
+Javada çoklu kalıtımı desteklemek için hangi yapı kullanılır?,A) class, B) interface, C) abstract, D) implements, E) inheritance,B
+Javada bir metodu diğer metodlar tarafından çağrılabilir yapmak için hangi anahtar kelime kullanılır?,A) private, B) public, C) protected, D) static, E) final,B
+Javada HashMapte bir anahtara karşılık gelen değeri nasıl alırsınız?,A) map.get(key);, B) map.find(key);, C) map.retrieve(key);, D) map.lookup(key);, E) map.fetch(key);,A
+Javada hangi anahtar kelime bir sınıfın başka bir sınıftan miras almasını sağlar?,A) super, B) inherits, C) implements, D) extends, E) extendsClass,D
+Javada bir istisna (exception) fırlatmak için hangi anahtar kelime kullanılır?,A) raise, B) throws, C) throw, D) catch, E) error,C
+Javada try-catch bloğunun amacı nedir?,A) veritabanı işlemlerini yönetmek, B) performansı arttırmak, C) bellek kullanımını azaltmak, D) kodun hızını arttırmak, E) hata yönetimi yapmak,E

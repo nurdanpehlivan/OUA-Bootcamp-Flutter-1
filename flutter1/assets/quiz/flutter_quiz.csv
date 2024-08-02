@@ -1,0 +1,11 @@
+question,option1,option2,option3,option4,answer
+Flutter hangi dilde yazılmıştır?,Java,Kotlin,Dart,Swift,C
+Flutter'da bir widget nedir?,Bir veri tabanı bağlantısı,Bir API çağrısı,Bir UI bileşeni,Bir dosya formatı,C
+Flutter'da StatelessWidget ile StatefulWidget arasındaki temel fark nedir?,StatelessWidget daha hızlıdır,StatefulWidget'in durumu vardır,StatelessWidget daha çok bellek kullanır,StatefulWidget daha az CPU kullanır,B
+Flutter'da sayfalar arasında geçiş yapmak için hangi yöntem kullanılır?,Navigator,Router,PageController,TransitionManager,A
+Flutter'da yerel depolama için hangi paket yaygın olarak kullanılır?,sqflite,shared_preferences,path_provider,hive,B
+Flutter'da bir widget'ı ortalamak için hangi widget kullanılır?,Column,Row,Center,Align,C
+Flutter'da asenkron işlemleri yönetmek için hangi sınıf kullanılır?,Future,Stream,AsyncTask,Coroutine,A
+Flutter'da animasyonlar için hangi paket önerilir?,flutter_sequence_animation,flare_flutter,lottie,animations,D
+Flutter'da widget'lar nasıl yeniden çizilir?,setState(),rebuild(),refresh(),updateUI(),A
+Flutter ile platform-spesifik kod yazmak için hangi yapı kullanılır?,PlatformChannel,MethodChannel,EventChannel,MessageChannel,B

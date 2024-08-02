@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; // Firestore için ekledik
 import '../register/login_screen.dart'; // Kendi dosya yapınıza göre düzenleyin
 import '../constants.dart'; // AppColors ve font ayarları için
 
@@ -13,47 +12,16 @@ class SettingsBox extends StatefulWidget {
 
 class _SettingsBoxState extends State<SettingsBox> {
   bool _isLoading = false;
-  String _bio = '';
 
   @override
   void initState() {
     super.initState();
-    _fetchBio();
-  }
-
-  Future<void> _fetchBio() async {
-    setState(() {
-      _isLoading = true;
-    });
-
-    final user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      try {
-        final docSnapshot = await FirebaseFirestore.instance
-            .collection('users')
-            .doc(user.uid)
-            .get();
-        final data = docSnapshot.data();
-        setState(() {
-          _bio =
-              data?['bio'] ?? 'Bio eklenmemiş'; // Kullanıcının bio bilgisini al
-        });
-      } catch (e) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Bio bilgisi yüklenemedi: $e')),
-        );
-      } finally {
-        setState(() {
-          _isLoading = false;
-        });
-      }
-    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300, // Yüksekliği biraz artırdık
+      height: 140, // Yüksekliği sabitledik
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(AppDimensions.borderRadius),
@@ -68,54 +36,26 @@ class _SettingsBoxState extends State<SettingsBox> {
       padding: const EdgeInsets.all(AppDimensions.padding),
       child: Stack(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              // Bio kısmı
-              const Text(
-                'Bio',
-                style: TextStyle(
-                  fontFamily: 'Sora',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: AppDimensions.smallSpacing),
+                _buildOption(
+                  icon: Icons.feedback,
+                  title: 'Geri Bildirim',
+                  subtitle: 'Geri bildirimde bulunun',
+                  onTap: () => _showFeedbackDialog(),
                 ),
-              ),
-              const SizedBox(height: AppDimensions.smallSpacing),
-              if (_isLoading)
-                const Center(child: CircularProgressIndicator())
-              else
-                Text(
-                  _bio,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
-                    fontFamily: 'Sora',
-                  ),
+                const SizedBox(height: AppDimensions.smallSpacing),
+                _buildOption(
+                  icon: Icons.exit_to_app,
+                  title: 'Çıkış Yap',
+                  subtitle: 'Çıkış yapmak için tıkla',
+                  onTap: () => _showSignOutConfirmationBottomSheet(),
                 ),
-              const SizedBox(height: AppDimensions.smallSpacing),
-              _buildOption(
-                icon: Icons.trending_up_rounded,
-                title: 'İstatistikler',
-                subtitle: 'İstatistikler görüntüle',
-              ),
-              const SizedBox(height: AppDimensions.smallSpacing),
-              _buildOption(
-                icon: Icons.calendar_today,
-                title: 'Günlük Yoklama',
-                subtitle: 'Günlük yoklama yap',
-                onTap: () {
-                  // Günlük Yoklama sayfasına geçiş kodu buraya eklenebilir.
-                },
-              ),
-              const SizedBox(height: AppDimensions.smallSpacing),
-              _buildOption(
-                icon: Icons.exit_to_app,
-                title: 'Çıkış Yap',
-                subtitle: 'Çıkış yapmak için tıkla',
-                onTap: () => _showSignOutConfirmationBottomSheet(),
-              ),
-            ],
+              ],
+            ),
           ),
           if (_isLoading)
             const Center(
@@ -173,6 +113,99 @@ class _SettingsBoxState extends State<SettingsBox> {
     );
   }
 
+  void _showFeedbackDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.black, // Arka plan rengini siyah yaptık
+          title: const Text(
+            'Geri Bildirim',
+            style: TextStyle(
+              fontFamily: 'Sora',
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          content: SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height *
+                    0.5, // Maksimum yükseklik
+              ),
+              child: const Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Geri bildiriminizi buraya yazabilirsiniz:',
+                    style: TextStyle(
+                      fontFamily: 'Sora',
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  TextField(
+                    maxLines: 5,
+                    style: TextStyle(
+                      fontFamily: 'Sora',
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      hintText: 'Geri bildiriminizi buraya yazın...',
+                      hintStyle: TextStyle(
+                        fontFamily: 'Sora',
+                        color: Colors.white54,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text(
+                'İptal',
+                style: TextStyle(
+                  fontFamily: 'Sora',
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Geri bildirim gönderme kodu buraya eklenebilir
+                Navigator.of(context).pop();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Geri bildiriminiz gönderildi. Teşekkürler!'),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent, // Buton rengi
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Text(
+                'Gönder',
+                style: TextStyle(
+                  fontFamily: 'Sora',
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   void _showSignOutConfirmationBottomSheet() {
     showModalBottomSheet(
       context: context,
@@ -180,7 +213,7 @@ class _SettingsBoxState extends State<SettingsBox> {
       builder: (BuildContext context) {
         return Container(
           decoration: const BoxDecoration(
-            color: Colors.white,
+            color: Colors.black, // Arka plan rengini siyah yaptık
             borderRadius: BorderRadius.vertical(
                 top: Radius.circular(AppDimensions.borderRadius)),
           ),
@@ -200,6 +233,7 @@ class _SettingsBoxState extends State<SettingsBox> {
                   fontSize: 22,
                   fontFamily: 'Sora',
                   fontWeight: FontWeight.bold,
+                  color: Colors.white, // Başlık rengi
                 ),
               ),
               const SizedBox(height: 8),
@@ -208,7 +242,7 @@ class _SettingsBoxState extends State<SettingsBox> {
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Sora',
-                  color: Colors.grey[600],
+                  color: Colors.grey[400], // Alt yazı rengi
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -219,7 +253,7 @@ class _SettingsBoxState extends State<SettingsBox> {
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey,
+                      backgroundColor: Colors.grey[600], // Buton rengi
                       shape: RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.circular(AppDimensions.borderRadius),
@@ -239,7 +273,7 @@ class _SettingsBoxState extends State<SettingsBox> {
                       await _signOut();
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.red, // Buton rengi
                       shape: RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.circular(AppDimensions.borderRadius),

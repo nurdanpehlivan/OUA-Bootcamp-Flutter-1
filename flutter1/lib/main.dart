@@ -6,6 +6,7 @@ import 'package:flutter1/screens/register/login_screen.dart';
 import 'package:flutter1/screens/register/register_screen.dart';
 import 'package:flutter1/screens/profile/profile_screen.dart';
 import 'package:flutter1/screens/categories/categories_page.dart';
+import 'package:flutter1/screens/profile/faq_page.dart'; // FaqPage importu ekleyin
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
         '/profile': (context) => ProfileScreen(),
         '/categories': (context) => const CategoriesPage(),
+        '/faqPage': (context) => const FaqPage(), // FaqPage rotasını ekleyin
       },
     );
   }

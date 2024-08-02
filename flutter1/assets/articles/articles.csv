@@ -1,5 +1,6 @@
 Title,Content
-Flutter ile mobil uygulama geliştirme,"Bu makale, Flutter ile mobil uygulama geliştirmenin avantajlarını ve temel özelliklerini açıklamaktadır."
+Flutter ile mobil uygulama geliştirme,"Nedir bu Flutter? Flutter, mobil uygulamalar oluşturmak için kullanılan açık kaynak kodlu bir yazılım geliştirme kitidir. İçinde Dart programlama dilini kullanır, eğer Java ile biraz haşır neşir olmuşsanız, Dart’ı da kısa bir süre içerisinde hiç sorun yaşamadan öğrenebilirsiniz."
+Google’ın geliştirdiği Flutter, Mayıs 2017 tarihinde piyasaya tanıtıldı. Cross-platform mobil uygulama geliştirmek için derde deva desek yerinde olur sanki."
 Flutter ile yeni özellikler,"Bu makale, Flutter'ın son güncellemeleri ve yeni özellikleri hakkında bilgi verir."
 Dart dilinde ileri konular,"Bu makale, Dart dilinin ileri düzey konularını ve uygulama pratiklerini ele alır."
 UI/UX tasarımında Flutter,"Bu makale, Flutter kullanarak etkili UI/UX tasarımı yapmanın yollarını açıklar."

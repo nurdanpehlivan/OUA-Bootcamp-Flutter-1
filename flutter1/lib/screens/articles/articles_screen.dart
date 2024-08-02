@@ -46,7 +46,11 @@ class _ArticlesPageState extends State<ArticlesPage> {
           centerTitle: true,
           title: const Text(
             "Makaleler",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "Sora",
+              fontWeight: FontWeight.bold,
+            ),
           ),
           backgroundColor: Colors.black,
         ),

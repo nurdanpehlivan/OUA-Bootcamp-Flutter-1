@@ -84,7 +84,10 @@ class _LoginScreenState extends State<LoginScreen> {
         prefixIcon: const Icon(Icons.email, color: AppColors.iconColor),
       ),
       keyboardType: TextInputType.emailAddress,
-      style: const TextStyle(color: AppColors.textColor),
+      style: const TextStyle(
+        color: AppColors.textColor,
+        fontFamily: "Sora",
+      ),
       validator: (value) =>
           value?.isEmpty ?? true ? AppStrings.emailRequired : null,
       onSaved: (value) => _email = value!,
@@ -100,7 +103,10 @@ class _LoginScreenState extends State<LoginScreen> {
         prefixIcon: const Icon(Icons.lock, color: AppColors.iconColor),
       ),
       obscureText: true,
-      style: const TextStyle(color: AppColors.textColor),
+      style: const TextStyle(
+        color: AppColors.textColor,
+        fontFamily: "Sora",
+      ),
       validator: (value) =>
           value?.isEmpty ?? true ? AppStrings.passwordRequired : null,
       onSaved: (value) => _password = value!,
@@ -115,7 +121,10 @@ class _LoginScreenState extends State<LoginScreen> {
           // TODO: Implement forgot password functionality
         },
         child: const Text(AppStrings.forgotPassword,
-            style: TextStyle(color: AppColors.textColor)),
+            style: TextStyle(
+              color: AppColors.textColor,
+              fontFamily: "Sora",
+            )),
       ),
     );
   }
@@ -132,6 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
               AppStrings.loginButton,
               style: TextStyle(
                 color: Colors.white,
+                fontFamily: "Sora",
               ),
             ),
           );
@@ -141,7 +151,10 @@ class _LoginScreenState extends State<LoginScreen> {
     return TextButton(
       onPressed: () => Navigator.pushNamed(context, '/register'),
       child: const Text(AppStrings.registerPrompt,
-          style: TextStyle(color: AppColors.textColor)),
+          style: TextStyle(
+            color: AppColors.textColor,
+            fontFamily: "Sora",
+          )),
     );
   }
 
