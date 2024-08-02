@@ -286,16 +286,12 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     
     <img src="bootcamp/sprintOne/screenshots/316.png" style="max-width: 100%; height: auto;">
   
-
 </details>
-- **Sprint Board Update**: Sprint board screenshotları:
-- 
-<details>
-    
-    <img src="bootcamp/sprintOne/screenshots/315.png" style="max-width: 100%; height: auto;">
-  
-  
 
+- **Sprint Board Update**: Sprint board screenshotları:
+
+<details>
+    <img src="bootcamp/sprintOne/screenshots/315.png" style="max-width: 100%; height: auto;">
 </details>
 
 
@@ -329,7 +325,6 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     <img src="bootcamp/sprintOne/screenshots/312.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/313.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/314.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/315.png" style="max-width: 100%; height: auto;">
 
 </details>
 
