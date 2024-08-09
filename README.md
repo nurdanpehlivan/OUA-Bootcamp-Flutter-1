@@ -322,7 +322,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
     <img src="bootcamp/sprintOne/screenshots/309.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/310.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/311.png" style="max-width: 100%; height: auto;">
-    <img src="bootcamp/sprintOne/screenshots/312.png" style="max-width: 100%; height: auto;">
+    <img src="bootcamp/sprintOne/screenshots/38.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/313.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/314.png" style="max-width: 100%; height: auto;">
 
