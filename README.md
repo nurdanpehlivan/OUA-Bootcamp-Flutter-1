@@ -251,6 +251,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
  
 <details>
     <summary><h3>Sprint 2 de Geliştirilen Ekranlar:</h3></summary>
+  `![WhatsApp` Görsel 2024-08-09 saat 13 14 23_77da5aba](https://github.com/user-attachments/assets/e09b5443-8ae1-49cb-8c44-60696a55c43e)
     <img src="bootcamp/sprintOne/screenshots/60.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/61.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/62.png" style="max-width: 100%; height: auto;">
