@@ -310,7 +310,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
  
 <details>
     <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary> 
-    <img src="bootcamp/sprintOne/screenshots/301.png" style="max-width: 100%; height: auto;">
+    ![WhatsApp Görsel 2024-08-09 saat 13 14 23_77da5aba](https://github.com/user-attachments/assets/c2f8ec19-dcc5-4af9-a6d1-e8e1cf01d1d2)
     <img src="bootcamp/sprintOne/screenshots/302.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/303.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/304.png" style="max-width: 100%; height: auto;">
