@@ -311,7 +311,7 @@ Amacımız, kullanıcıların yazılım dillerini öğrenme sürecini daha verim
  
 <details>
     <summary><h3>Sprint 3 de Geliştirilen Ekranlar:</h3></summary> 
-    https://github.com/user-attachments/assets/c2f8ec19-dcc5-4af9-a6d1-e8e1cf01d1d2
+    <img src="bootcamp/sprintOne/screenshots/37.jpg" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/302.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/303.png" style="max-width: 100%; height: auto;">
     <img src="bootcamp/sprintOne/screenshots/304.png" style="max-width: 100%; height: auto;">
